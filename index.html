@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>川口市・戸田市 野球場 空き状況</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1d2330;--sub:#667085;--line:#e3e6ec;--accent:#1f7a4d;--open:#e6f6ec;--full:#f3f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--card:#1d2128;--text:#e8eaee;--sub:#9aa3b2;--line:#2d333d;--accent:#4cc38a;--open:#17352a;--full:#232830}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:820px;margin:0 auto;padding:16px}
+h1{font-size:1.25rem;margin:0 0 4px}
+.meta{color:var(--sub);font-size:.85rem;margin-bottom:12px}
+.meta b{color:var(--text)}
+.links a{display:inline-block;margin:0 8px 12px 0;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none;font-size:.85rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.row:last-child{margin-bottom:0}
+.chip{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:999px;padding:4px 12px;font-size:.85rem;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+label{font-size:.9rem;cursor:pointer}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:.8rem;color:var(--sub);font-weight:600}
+tr.slot{cursor:pointer}
+tr.open td:last-child{background:var(--open);color:var(--accent);font-weight:700}
+tr.full{color:var(--sub)}
+tr.full td:last-child{background:var(--full)}
+.banner{background:#fff4d6;color:#6b4e00;border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:.85rem}
+.empty{padding:24px;text-align:center;color:var(--sub)}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);max-width:90vw;width:360px}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+.go{display:block;text-align:center;background:var(--accent);color:#fff;border-radius:8px;padding:10px;text-decoration:none;margin:12px 0 8px}
+</style>
+</head>
+<body>
+<main>
+  <h1>川口市・戸田市 野球場 空き状況</h1>
+  <div class="meta">空き枠: <b id="count">読み込み中…</b>　更新: <b id="updated">読み込み中…</b></div>
+  <div class="links" id="links"></div>
+  <div id="banner"></div>
+
+  <div class="panel">
+    <div class="row">
+      <button class="chip on" data-days="we">土日・祝日のみ</button>
+      <button class="chip" data-days="all">平日含むすべて</button>
+      <label><input type="checkbox" id="onlyOpen" checked> 空き枠のみ表示</label>
+    </div>
+    <div class="row" id="grounds"></div>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>日付</th><th>グラウンド</th><th>面名</th><th>区分</th><th>状況</th></tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+</main>
+
+<dialog id="dlg">
+  <div id="dlgBody"></div>
+  <a class="go" id="dlgLink" target="_blank" rel="noopener">予約システムで予約・申請</a>
+  <button class="chip" onclick="dlg.close()">閉じる</button>
+</dialog>
+
+<script>
+const $ = id => document.getElementById(id);
+const DOW = ["日","月","火","水","木","金","土"];
+const state = { data: null, days: "we", ground: "all" };
+
+// slots.json が読めないときに表示するデモデータ
+function demoData() {
+  const grounds = ["サンプル球場A(川口)","サンプル球場B(川口)","サンプル球場C(戸田)"];
+  const periods = ["午前","午後","夜間"];
+  const slots = [];
+  const base = new Date();
+  for (let i = 0; i < 45; i++) {
+    const d = new Date(base); d.setDate(base.getDate() + i);
+    const ds = d.toISOString().slice(0, 10);
+    grounds.forEach((g, gi) => ["A面","B面"].forEach((c, ci) => periods.forEach((p, pi) => {
+      slots.push({ date: ds, ground: g, court: c, period: p,
+        status: (i * 7 + gi * 3 + ci * 5 + pi) % 4 === 0 ? "open" : "full",
+        source: g.includes("戸田") ? "toda" : "kawaguchi" });
+    })));
+  }
+  return { updated: new Date().toISOString(), holidays: [], demo: true,
+    sources: [{ id: "kawaguchi", name: "川口市予約", url: "https://kawaguchi-city.rakuriza.jp/" },
+              { id: "toda", name: "戸田市予約", url: "https://yoyaku.city.toda.saitama.jp/yoyaku/" }], slots };
+}
+
+async function load() {
+  try {
+    const r = await fetch("slots.json?t=" + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    state.data = await r.json();
+  } catch (e) {
+    state.data = demoData();
+    $("banner").innerHTML = '<div class="banner">slots.json を読み込めなかったため、デモデータを表示しています。</div>';
+  }
+  const d = state.data;
+  $("links").innerHTML = (d.sources || []).map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`).join("");
+  const names = [...new Set(d.slots.map(s => s.ground))];
+  $("grounds").innerHTML = ['<button class="chip on" data-g="all">全て</button>']
+    .concat(names.map(n => `<button class="chip" data-g="${n}">${n}</button>`)).join("");
+  $("updated").textContent = new Date(d.updated).toLocaleString("ja-JP", { dateStyle: "short", timeStyle: "short" });
+  render();
+}
+
+function isWeekendOrHoliday(ds) {
+  const day = new Date(ds + "T00:00:00").getDay();
+  return day === 0 || day === 6 || (state.data.holidays || []).includes(ds);
+}
+
+function render() {
+  const onlyOpen = $("onlyOpen").checked;
+  let rows = state.data.slots.filter(s =>
+    (state.days === "all" || isWeekendOrHoliday(s.date)) &&
+    (state.ground === "all" || s.ground === state.ground) &&
+    (!onlyOpen || s.status === "open"));
+  rows.sort((a, b) => (a.date + a.ground + a.court + a.period).localeCompare(b.date + b.ground + b.court + b.period));
+  $("count").textContent = rows.filter(s => s.status === "open").length + " 枠";
+  $("body").innerHTML = rows.length ? rows.map((s, i) => {
+    const d = new Date(s.date + "T00:00:00");
+    const label = `${d.getMonth() + 1}/${d.getDate()}(${DOW[d.getDay()]})`;
+    return `<tr class="slot ${s.status}" data-i="${i}"><td>${label}</td><td>${s.ground}</td><td>${s.court || "-"}</td><td>${s.period}</td><td>${s.status === "open" ? "○ 空き" : "× 埋"}</td></tr>`;
+  }).join("") : '<tr><td colspan="5" class="empty">条件に合う枠がありません</td></tr>';
+  state.rows = rows;
+}
+
+document.addEventListener("click", e => {
+  const chip = e.target.closest(".chip");
+  if (chip && chip.dataset.days) {
+    state.days = chip.dataset.days;
+    document.querySelectorAll("[data-days]").forEach(b => b.classList.toggle("on", b === chip));
+    render();
+  } else if (chip && chip.dataset.g) {
+    state.ground = chip.dataset.g;
+    document.querySelectorAll("[data-g]").forEach(b => b.classList.toggle("on", b === chip));
+    render();
+  }
+  const tr = e.target.closest("tr.slot");
+  if (tr) {
+    const s = state.rows[+tr.dataset.i];
+    const src = (state.data.sources || []).find(x => x.id === s.source) || (state.data.sources || [])[0];
+    $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${s.status === "open" ? "空き" : "予約済み"}</p>`;
+    $("dlgLink").href = src ? src.url : "#";
+    $("dlg").showModal();
+  }
+});
+$("onlyOpen").addEventListener("change", render);
+load();
+</script>
+</body>
+</html>
