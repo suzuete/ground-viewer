@@ -47,7 +47,7 @@ SOURCES = [
     {"id": "kawaguchi", "name": "川口市", "url": "https://kawaguchi-city.rakuriza.jp/",
      "fn": fetch_kawaguchi, "window": None},
     {"id": "toda", "name": "戸田市", "url": "https://yoyaku.city.toda.saitama.jp/yoyaku/",
-     "fn": fetch_toda, "window": (9, 10)},   # 9:00〜9:59
+     "fn": fetch_toda, "window": (9, 24)},   # 9:00〜23:59
 ]
 
 
