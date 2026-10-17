@@ -118,7 +118,9 @@ def _go_next(page, sec, info):
 
 def _open_results(page):
     """トップ → 施設選択 → 空き状況(カレンダー)画面まで進む。"""
-    page.goto(KAWAGUCHI_URL)
+    resp = page.goto(KAWAGUCHI_URL, wait_until="domcontentloaded", timeout=60000)
+    if resp is not None and resp.status >= 400:
+        raise RuntimeError(f"川口市サイトがHTTP {resp.status}を返しました")
     page.get_by_role("button", name="施設を検索する").click()
     for fid in KAWAGUCHI_FACILITY_IDS:
         page.locator(f"#facility-{fid}").check()
