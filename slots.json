@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T12:53:18.333335+09:00",
+ "updated": "2026-10-17T13:26:49.568945+09:00",
  "holidays": [],
  "sources": [
   {
@@ -22,7 +22,7 @@
   "toda": {
    "ok": false,
    "at": null,
-   "error": "戸田市の操作手順を実装してください"
+   "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://yoyaku.city.toda.saitama.jp/yoyaku/\", waiting until \"load\"\n"
   }
  },
  "slots": [
