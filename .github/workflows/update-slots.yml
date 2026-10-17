@@ -22,15 +22,21 @@ jobs:
       - run: python -m playwright install chromium
       - run: python scraper.py
       - name: commit
-        shell: bash
+        shell: powershell
         run: |
+          $ErrorActionPreference = "Continue"
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add slots.json
-          if git diff --staged --quiet; then exit 0; fi
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) { exit 0 }
           git commit -m "update slots"
-          for i in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push && exit 0
-            sleep 5
-          done
+          for ($i = 0; $i -lt 3; $i++) {
+            git pull --rebase -X theirs origin main
+            if ($LASTEXITCODE -eq 0) {
+              git push
+              if ($LASTEXITCODE -eq 0) { exit 0 }
+            }
+            Start-Sleep -Seconds 5
+          }
           exit 1
