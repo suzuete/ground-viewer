@@ -38,7 +38,8 @@ KAWAGUCHI_URL = "https://kawaguchi-city.rakuriza.jp/?purpose=1%2C2%2C3%2C4&page=
 KAWAGUCHI_FACILITY_IDS = [15, 16, 13, 10, 14, 8, 17]  # 記録時に選んだ施設
 HORIZON_DAYS = 60        # 空きのある日を何日先まで調べるか
 MAX_PAGES = 12           # 1つのカレンダーで「次週」を押す最大回数
-TIME_DETAIL = True       # 時間帯(9:00〜11:00など)まで取得する(土日祝のみ)
+TIME_DETAIL = True       # 時間帯(9:00〜11:00など)まで取得する
+TIME_WEEKDAYS = True     # 平日も時間帯まで取得する(Falseにすると土日祝のみ。実行時間が短くなる)
 TIME_HORIZON_DAYS = 45   # 時間帯は何日先まで取得するか
 BATCH_SIZE = 10          # 日付を同時に選べる上限(サイトの仕様: 最大10件)
 
@@ -302,7 +303,7 @@ def fetch_kawaguchi(page):
         targets = sorted(
             (v["idx"], date.fromisoformat(k[0]), k[1], k[2]) for k, v in found.items()
             if v["status"] == "open"
-            and is_weekend_or_holiday(date.fromisoformat(k[0]))
+            and (TIME_WEEKDAYS or is_weekend_or_holiday(date.fromisoformat(k[0])))
             and date.fromisoformat(k[0]) <= horizon
             and not is_outside_acceptance(date.fromisoformat(k[0]), today))
         key_of = lambda t: (t[1].isoformat(), t[2], t[3])
