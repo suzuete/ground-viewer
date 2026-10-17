@@ -1,4 +1,5 @@
-# 配置場所: .github/workflows/update-slots.yml
+# 配置場所: .github/workflows/update-slots.yml (今のファイルを、この内容に置き換える)
+# 実行役: 自分のWindowsパソコン(self-hosted runner)
 name: update-slots
 on:
   schedule:
@@ -7,22 +8,29 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: update-slots           # 前回の実行が終わる前に重ならないようにする
+  group: update-slots
   cancel-in-progress: false
+env:
+  PYTHONUTF8: "1"               # Windowsで日本語の表示・保存が文字化けしないように
 jobs:
   scrape:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: [self-hosted, windows]
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install playwright && playwright install --with-deps chromium
+      - run: python -m pip install playwright jpholiday
+      - run: python -m playwright install chromium
       - run: python scraper.py
       - name: commit
+        shell: bash
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add slots.json
-          git diff --staged --quiet || (git commit -m "update slots" && git push)
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "update slots"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
