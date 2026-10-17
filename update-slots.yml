@@ -1,0 +1,28 @@
+# 配置場所: .github/workflows/update-slots.yml
+name: update-slots
+on:
+  schedule:
+    - cron: "*/20 * * * *"      # 20分ごと(戸田市は scraper.py 側で 9:00〜23:59 のみ取得)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: update-slots           # 前回の実行が終わる前に重ならないようにする
+  cancel-in-progress: false
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright jpholiday && playwright install --with-deps chromium
+      - run: python scraper.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add slots.json
+          git diff --staged --quiet || (git commit -m "update slots" && git push)

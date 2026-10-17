@@ -26,6 +26,7 @@ th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);white
 th{font-size:.8rem;color:var(--sub);font-weight:600}
 tr.slot{cursor:pointer}
 tr.open td:last-child{background:var(--open);color:var(--accent);font-weight:700}
+tr.lottery td:last-child{background:#eaf1ff;color:#2b5cc4;font-weight:700}
 tr.full{color:var(--sub)}
 tr.full td:last-child{background:var(--full)}
 .banner{background:#fff4d6;color:#6b4e00;border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:.85rem}
@@ -53,7 +54,7 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th>日付</th><th>グラウンド</th><th>面名</th><th>区分</th><th>状況</th></tr></thead>
+      <thead><tr><th>日付</th><th>グラウンド</th><th>面名</th><th>時間帯</th><th>状況</th></tr></thead>
       <tbody id="body"></tbody>
     </table>
   </div>
@@ -69,6 +70,8 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
 const $ = id => document.getElementById(id);
 const DOW = ["日","月","火","水","木","金","土"];
 const state = { data: null, days: "we", ground: "all" };
+const ST = { open: "○ 空き", lottery: "抽 抽選", full: "× 埋" };
+const pkey = p => (String(p).match(/(\d+):(\d+)/) || ["", "99", "00"]).slice(1).map(x => x.padStart(2, "0")).join(":");
 
 // slots.json が読めないときに表示するデモデータ
 function demoData() {
@@ -119,12 +122,12 @@ function render() {
     (state.days === "all" || isWeekendOrHoliday(s.date)) &&
     (state.ground === "all" || s.ground === state.ground) &&
     (!onlyOpen || s.status === "open"));
-  rows.sort((a, b) => (a.date + a.ground + a.court + a.period).localeCompare(b.date + b.ground + b.court + b.period));
+  rows.sort((a, b) => (a.date + a.ground + a.court + pkey(a.period)).localeCompare(b.date + b.ground + b.court + pkey(b.period)));
   $("count").textContent = rows.filter(s => s.status === "open").length + " 枠";
   $("body").innerHTML = rows.length ? rows.map((s, i) => {
     const d = new Date(s.date + "T00:00:00");
     const label = `${d.getMonth() + 1}/${d.getDate()}(${DOW[d.getDay()]})`;
-    return `<tr class="slot ${s.status}" data-i="${i}"><td>${label}</td><td>${s.ground}</td><td>${s.court || "-"}</td><td>${s.period}</td><td>${s.status === "open" ? "○ 空き" : "× 埋"}</td></tr>`;
+    return `<tr class="slot ${s.status}" data-i="${i}"><td>${label}</td><td>${s.ground}</td><td>${s.court || "-"}</td><td>${s.period}</td><td>${ST[s.status] || "× 埋"}</td></tr>`;
   }).join("") : '<tr><td colspan="5" class="empty">条件に合う枠がありません</td></tr>';
   state.rows = rows;
 }
@@ -144,7 +147,7 @@ document.addEventListener("click", e => {
   if (tr) {
     const s = state.rows[+tr.dataset.i];
     const src = (state.data.sources || []).find(x => x.id === s.source) || (state.data.sources || [])[0];
-    $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${s.status === "open" ? "空き" : "予約済み"}</p>`;
+    $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${s.status === "open" ? "空き" : s.status === "lottery" ? "抽選" : "予約済み"}</p>`;
     $("dlgLink").href = src ? src.url : "#";
     $("dlg").showModal();
   }
