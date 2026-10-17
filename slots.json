@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T19:24:06.787176+09:00",
+ "updated": "2026-10-17T19:27:14.010310+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -11,18 +11,22 @@
   {
    "id": "kawaguchi",
    "name": "川口市",
-   "url": "https://kawaguchi-city.rakuriza.jp/"
+   "url": "https://kawaguchi-city.rakuriza.jp/",
+   "interval_min": 20,
+   "hours": "終日"
   },
   {
    "id": "toda",
    "name": "戸田市",
-   "url": "https://yoyaku.city.toda.saitama.jp/yoyaku/"
+   "url": "https://yoyaku.city.toda.saitama.jp/yoyaku/",
+   "interval_min": 20,
+   "hours": "9:00〜23:59"
   }
  ],
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-17T19:24:06.787176+09:00",
+   "at": "2026-10-17T19:27:14.010310+09:00",
    "error": null
   },
   "toda": {
@@ -33,11 +37,267 @@
  },
  "slots": [
   {
+   "date": "2026-10-17",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "19:00〜21:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "19:00〜21:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "19:00〜21:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-17",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-10-18",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "19:00〜21:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -57,6 +317,38 @@
    "source": "kawaguchi"
   },
   {
+   "date": "2026-10-18",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-18",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-10-19",
    "ground": "安行スポーツセンター",
    "court": "野球場",
@@ -70,6 +362,22 @@
    "court": "多目的グラウンド（1面）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-19",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-19",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -131,6 +439,14 @@
   {
    "date": "2026-10-20",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-20",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -142,6 +458,14 @@
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-20",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -179,9 +503,25 @@
   {
    "date": "2026-10-21",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-21",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-21",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -227,6 +567,14 @@
   {
    "date": "2026-10-22",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-22",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -238,6 +586,14 @@
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-22",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -275,6 +631,14 @@
   {
    "date": "2026-10-23",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-23",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -290,10 +654,82 @@
   },
   {
    "date": "2026-10-23",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-23",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -316,8 +752,128 @@
    "date": "2026-10-24",
    "ground": "芝スポーツセンター",
    "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
    "period": "19:00〜21:00",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -347,6 +903,14 @@
   {
    "date": "2026-10-26",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-26",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -378,6 +942,14 @@
   },
   {
    "date": "2026-10-27",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-27",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "要確認",
@@ -390,6 +962,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-27",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -410,10 +990,26 @@
   },
   {
    "date": "2026-10-27",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-27",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-28",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -430,6 +1026,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-28",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -491,9 +1095,25 @@
   {
    "date": "2026-10-29",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-29",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-29",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -505,6 +1125,22 @@
    "source": "kawaguchi"
   },
   {
+   "date": "2026-10-29",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-10-30",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
@@ -523,6 +1159,14 @@
   {
    "date": "2026-10-30",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -534,6 +1178,86 @@
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -556,6 +1280,38 @@
    "date": "2026-10-31",
    "ground": "芝スポーツセンター",
    "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
    "period": "17:00〜19:00",
    "status": "open",
    "source": "kawaguchi"
@@ -566,6 +1322,94 @@
    "court": "野球場",
    "period": "19:00〜21:00",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -582,6 +1426,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -614,6 +1466,70 @@
    "court": "前田西野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -638,6 +1554,22 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -674,10 +1606,34 @@
   },
   {
    "date": "2026-11-05",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-05",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -714,10 +1670,34 @@
   },
   {
    "date": "2026-11-06",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-06",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -746,6 +1726,78 @@
   },
   {
    "date": "2026-11-07",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "17:00〜19:00",
@@ -761,6 +1813,86 @@
    "source": "kawaguchi"
   },
   {
+   "date": "2026-11-07",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-11-09",
    "ground": "安行スポーツセンター",
    "court": "野球場",
@@ -770,10 +1902,34 @@
   },
   {
    "date": "2026-11-09",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-09",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -802,10 +1958,42 @@
   },
   {
    "date": "2026-11-10",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-10",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -858,6 +2046,22 @@
   },
   {
    "date": "2026-11-11",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-11",
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "要確認",
@@ -906,6 +2110,22 @@
   },
   {
    "date": "2026-11-12",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-12",
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "要確認",
@@ -950,6 +2170,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -986,6 +2214,70 @@
   },
   {
    "date": "2026-11-14",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "17:00〜19:00",
@@ -1004,6 +2296,38 @@
    "date": "2026-11-14",
    "ground": "芝スポーツセンター",
    "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
    "period": "17:00〜19:00",
    "status": "open",
    "source": "kawaguchi"
@@ -1017,6 +2341,86 @@
    "source": "kawaguchi"
   },
   {
+   "date": "2026-11-14",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-11-16",
    "ground": "安行スポーツセンター",
    "court": "野球場",
@@ -1043,6 +2447,14 @@
   {
    "date": "2026-11-16",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -1074,6 +2486,14 @@
   },
   {
    "date": "2026-11-17",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-17",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "要確認",
@@ -1086,6 +2506,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1122,6 +2550,14 @@
   },
   {
    "date": "2026-11-18",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-18",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "要確認",
@@ -1134,6 +2570,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1195,9 +2639,25 @@
   {
    "date": "2026-11-19",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1238,6 +2698,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1274,6 +2742,70 @@
   },
   {
    "date": "2026-11-21",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "17:00〜19:00",
@@ -1292,6 +2824,38 @@
    "date": "2026-11-21",
    "ground": "芝スポーツセンター",
    "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
    "period": "17:00〜19:00",
    "status": "open",
    "source": "kawaguchi"
@@ -1305,6 +2869,150 @@
    "source": "kawaguchi"
   },
   {
+   "date": "2026-11-21",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
    "date": "2026-11-24",
    "ground": "安行スポーツセンター",
    "court": "野球場",
@@ -1331,6 +3039,14 @@
   {
    "date": "2026-11-24",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -1342,6 +3058,14 @@
    "court": "野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1374,6 +3098,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1435,6 +3167,14 @@
   {
    "date": "2026-11-26",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -1491,6 +3231,14 @@
   {
    "date": "2026-11-27",
    "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-27",
+   "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "要確認",
    "status": "open",
@@ -1518,6 +3266,70 @@
    "court": "前田西野球場",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1540,6 +3352,38 @@
    "date": "2026-11-28",
    "ground": "芝スポーツセンター",
    "court": "野球場",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
    "period": "17:00〜19:00",
    "status": "open",
    "source": "kawaguchi"
@@ -1550,6 +3394,86 @@
    "court": "野球場",
    "period": "19:00〜21:00",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1574,6 +3498,14 @@
    "court": "競技場（運動場）",
    "period": "要確認",
    "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-30",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -1612,600 +3544,1024 @@
    "date": "2026-12-01",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-01",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-01",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-01",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-01",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-01",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-01",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-01",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-02",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-02",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-02",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-03",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-03",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-03",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-03",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "休館",
+   "status": "closed",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-03",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "休館",
+   "status": "closed",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-03",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-03",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-03",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-04",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-04",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-04",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-04",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-04",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-04",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-04",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-04",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-05",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-05",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-05",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-05",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-05",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-05",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-05",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-05",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-06",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-07",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-07",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-07",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-07",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-07",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-07",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-07",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-07",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-08",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-08",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-08",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-09",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-09",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-09",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-10",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-10",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-10",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-11",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-11",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-11",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-12",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-12",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-12",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-12",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-12",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-12",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-12",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-12",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "安行スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "新郷スポーツセンター",
+   "court": "競技場（運動場）",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-13",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-14",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-14",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-14",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-15",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-15",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-15",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-16",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2026-12-16",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "要確認",
-   "status": "open",
+   "period": "受付期間外",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-12-16",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "終日",
+   "status": "full",
    "source": "kawaguchi"
   }
  ]
