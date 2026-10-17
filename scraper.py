@@ -129,14 +129,30 @@ def _open_results(page):
     page.wait_for_timeout(500)
 
 
+def _classify_day(label):
+    """カレンダーの日付ボタンの説明文 → 状態。分類できない(情報なし等)ものは None。"""
+    if "空きです" in label:
+        return "open"
+    if "満室" in label:
+        return "full"
+    if "抽選" in label:
+        return "lottery"
+    if "期間外" in label:
+        return "outside"
+    if "休館" in label or "施設都合" in label:
+        return "closed"
+    return None
+
+
 def _crawl_calendars(page):
-    """全カレンダーを先へ進めながら、空きのある日を集める。{(日付, 施設, 面): カレンダー番号}"""
+    """全カレンダーを先へ進めながら、各日の状態を集める。
+    {(日付, 施設, 面): {"idx": カレンダー番号, "status": open/full/lottery/outside/closed}}"""
     today = datetime.now(JST).date()
     limit = today + timedelta(days=HORIZON_DAYS)
     sections = page.locator(".facility-calender-content")
     if sections.count() == 0:
         raise RuntimeError("カレンダーが見つかりません(画面構造を確認してください)")
-    found = {}
+    found, unknown = {}, set()
     for i in range(sections.count()):
         sec = sections.nth(i)
         info = sec.evaluate(_JS_READ)
@@ -150,13 +166,20 @@ def _crawl_calendars(page):
                 break
             for k, c in enumerate(cells):
                 d = start + timedelta(days=k)
-                if c and "空きです" in c["status"] and today <= d <= limit:
-                    found[(d.isoformat(), info["ground"], info["court"])] = i
+                if not c or not (today <= d <= limit):
+                    continue
+                st = _classify_day(c["status"])
+                if st:
+                    found[(d.isoformat(), info["ground"], info["court"])] = {"idx": i, "status": st}
+                elif "情報なし" not in c["status"]:
+                    unknown.add(c["status"])
             if start + timedelta(days=len(cells) - 1) >= limit:
                 break
             info = _go_next(page, sec, info)
             if info is None:
                 break
+    if unknown:
+        print(f"[kawaguchi] 未対応の表示(無視しました): {sorted(unknown)}")
     return found
 
 
@@ -203,7 +226,8 @@ _JS_TIME = r"""
     const cols = [...acc.querySelectorAll('thead th')].map(t => t.textContent.trim());
     return [...acc.querySelectorAll('td.availability-cell')].map(td => ({
       ground, court, col: cols[td.cellIndex] || '',
-      date: td.dataset.date || '', time: td.dataset.timeString || '', cls: td.className
+      date: td.dataset.date || '', time: td.dataset.timeString || '', cls: td.className,
+      title: td.getAttribute('title') || ''
     }));
   });
 });
@@ -219,20 +243,25 @@ def _fmt_time(t):
         return t
 
 
+def _cell_status(cls, title):
+    if "期間外" in title:
+        return "outside"
+    if "availability-available" in cls:
+        return "open"
+    if "lottery" in cls:
+        return "lottery"
+    return "full"
+
+
 def _time_slots(rows):
-    """時間選択画面の行 → ({(日付, 施設, 面): [slot, ...]})。全部埋まっている面も空リストで記録する。"""
+    """時間選択画面の行 → {(日付, 施設, 面): [slot, ...]}。満席の枠も記録する。"""
     result = {}
     for r in rows:
         key = (r["date"], r["ground"], r["court"])
         result.setdefault(key, [])
-        if "availability-available" in r["cls"]:
-            status = "open"
-        elif "lottery" in r["cls"]:
-            status = "lottery"
-        else:
-            continue
         court = r["court"] if r["col"] in ("", "全面") else f'{r["court"]} {r["col"]}'
-        result[key].append(slot(r["date"], r["ground"], court, _fmt_time(r["time"]), status, "kawaguchi"))
+        result[key].append(slot(r["date"], r["ground"], court, _fmt_time(r["time"]),
+                                _cell_status(r["cls"], r.get("title", "")), "kawaguchi"))
     return result
 
 
@@ -243,34 +272,69 @@ def _read_time_page(page):
     return page.evaluate(_JS_TIME)
 
 
+ACCEPT_MONTHS_AHEAD = 1   # 受付は翌月分まで(例: 10月中は11月末まで。12月分は11/1から受付)
+
+
+def is_outside_acceptance(d, today):
+    return d.year * 12 + d.month > today.year * 12 + today.month + ACCEPT_MONTHS_AHEAD
+
+
+def _fetch_time_details(page, targets, size, detailed):
+    for i in range(0, len(targets), size):
+        batch = targets[i:i + size]
+        try:
+            _open_results(page)                # 毎回最初からやり直す(状態を引きずらない)
+            if _select_dates(page, batch) == 0:
+                continue
+            detailed.update(_time_slots(_read_time_page(page)))
+        except Exception as e:
+            print(f"[kawaguchi] 時間帯の取得に失敗(日単位の表示で代用): {e}")
+
+
 def fetch_kawaguchi(page):
     _open_results(page)
     found = _crawl_calendars(page)
+    today = datetime.now(JST).date()
 
     detailed = {}
     if TIME_DETAIL:
-        today = datetime.now(JST).date()
         horizon = today + timedelta(days=TIME_HORIZON_DAYS)
         targets = sorted(
-            (idx, date.fromisoformat(d), g, c) for (d, g, c), idx in found.items()
-            if is_weekend_or_holiday(date.fromisoformat(d)) and date.fromisoformat(d) <= horizon)
-        for i in range(0, len(targets), BATCH_SIZE):
-            batch = targets[i:i + BATCH_SIZE]
-            try:
-                _open_results(page)            # 毎回最初からやり直す(状態を引きずらない)
-                if _select_dates(page, batch) == 0:
-                    continue
-                detailed.update(_time_slots(_read_time_page(page)))
-            except Exception as e:
-                print(f"[kawaguchi] 時間帯の取得に失敗(日単位の表示で代用): {e}")
-        print(f"[kawaguchi] 時間帯を取得できた枠: {len(detailed)} / {len(targets)}")
+            (v["idx"], date.fromisoformat(k[0]), k[1], k[2]) for k, v in found.items()
+            if v["status"] == "open"
+            and is_weekend_or_holiday(date.fromisoformat(k[0]))
+            and date.fromisoformat(k[0]) <= horizon
+            and not is_outside_acceptance(date.fromisoformat(k[0]), today))
+        key_of = lambda t: (t[1].isoformat(), t[2], t[3])
+        _fetch_time_details(page, targets, BATCH_SIZE, detailed)
+        missing = [t for t in targets if key_of(t) not in detailed]
+        if missing:                            # 取れなかった分は、少人数でやり直す
+            print(f"[kawaguchi] 取得できなかった {len(missing)} 件を再試行します")
+            _fetch_time_details(page, missing, 3, detailed)
+            missing = [t for t in targets if key_of(t) not in detailed]
+        print(f"[kawaguchi] 時間帯を取得できた枠: {len(targets) - len(missing)} / {len(targets)}")
+        for t in missing:
+            print(f"  未取得: {t[1]} {t[2]} {t[3]}")
 
     result = []
     for key in sorted(found):
-        if key in detailed:
-            result += detailed[key]
-        else:                                  # 時間帯が取れなかった日は日単位で表示
-            result.append(slot(key[0], key[1], key[2], "要確認", "open", "kawaguchi"))
+        d, g, c = key
+        st = found[key]["status"]
+        if st == "open":
+            if is_outside_acceptance(date.fromisoformat(d), today):
+                result.append(slot(d, g, c, "受付期間外", "outside", "kawaguchi"))
+            elif key in detailed:
+                result += detailed[key]
+            else:                              # 時間帯を調べなかった日(平日など)
+                result.append(slot(d, g, c, "要確認", "open", "kawaguchi"))
+        elif st == "full":
+            result.append(slot(d, g, c, "終日", "full", "kawaguchi"))
+        elif st == "lottery":
+            result.append(slot(d, g, c, "抽選", "lottery", "kawaguchi"))
+        elif st == "outside":
+            result.append(slot(d, g, c, "受付期間外", "outside", "kawaguchi"))
+        elif st == "closed":
+            result.append(slot(d, g, c, "休館", "closed", "kawaguchi"))
     return result
 
 
@@ -283,9 +347,9 @@ def fetch_toda(page):
 # window: 実行を許可する日本時間の時間帯(開始時, 終了時)。None なら常時
 SOURCES = [
     {"id": "kawaguchi", "name": "川口市", "url": "https://kawaguchi-city.rakuriza.jp/",
-     "fn": fetch_kawaguchi, "window": None},
+     "fn": fetch_kawaguchi, "window": None, "interval_min": 20, "hours": "終日"},
     {"id": "toda", "name": "戸田市", "url": "https://yoyaku.city.toda.saitama.jp/yoyaku/",
-     "fn": fetch_toda, "window": (9, 24)},   # 9:00〜23:59
+     "fn": fetch_toda, "window": (9, 24), "interval_min": 20, "hours": "9:00〜23:59"},
 ]
 
 
@@ -329,7 +393,8 @@ def main():
     out = {
         "updated": now.isoformat(),
         "holidays": holidays_between(now.date(), now.date() + timedelta(days=120)) if jpholiday else old.get("holidays", []),
-        "sources": [{"id": s["id"], "name": s["name"], "url": s["url"]} for s in SOURCES],
+        "sources": [{"id": s["id"], "name": s["name"], "url": s["url"],
+                     "interval_min": s["interval_min"], "hours": s["hours"]} for s in SOURCES],
         "source_status": status,
         "slots": [x for lst in slots_by_src.values() for x in lst],
     }
