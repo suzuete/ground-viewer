@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T09:29:40.210657+09:00",
+ "updated": "2026-10-17T09:36:54.253865+09:00",
  "holidays": [],
  "sources": [
   {
@@ -15,9 +15,9 @@
  ],
  "source_status": {
   "kawaguchi": {
-   "ok": true,
+   "ok": false,
    "at": "2026-10-17T09:29:40.210657+09:00",
-   "error": null
+   "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://kawaguchi-city.rakuriza.jp/?purpose=1%2C2%2C3%2C4&page=1&per_page=30\", waiting until \"load\"\n"
   },
   "toda": {
    "ok": false,
