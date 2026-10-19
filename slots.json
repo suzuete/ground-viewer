@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T17:07:14.523469+09:00",
+ "updated": "2026-10-19T17:50:31.143860+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-19T17:07:14.523469+09:00",
+   "at": "2026-10-19T17:50:31.143860+09:00",
    "error": null
   },
   "toda": {
    "ok": false,
    "at": null,
-   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=re.compile(r\"^$\"))\n"
+   "error": "戸田市: 道満グリーンパーク 野球場Ａ のカレンダーを開けませんでした"
   }
  },
  "slot_templates": {
