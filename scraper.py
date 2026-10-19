@@ -549,6 +549,26 @@ def _toda_wait(page):
     return None
 
 
+def _toda_wait_calendar(page):
+    """施設を選んだあと、カレンダーが表示されるまで待つ(最大15秒)。"""
+    for _ in range(50):
+        if page.locator("#areaToKomaDisplay").count() > 0 and \
+                page.locator('input[name$="displayStartDate"]').count() > 0:
+            return True
+        page.wait_for_timeout(300)
+    return False
+
+
+def _toda_screen_hint(page):
+    """失敗したとき、いま画面にあるボタンの名前を、原因調査の手がかりとして返す。"""
+    try:
+        names = page.evaluate("""() => [...document.querySelectorAll('input[type=button],button')]
+            .map(e => (e.value || e.innerText || '').trim()).filter(Boolean).slice(0, 25)""")
+        return "ボタン: " + " / ".join(names)
+    except Exception:
+        return ""
+
+
 def fetch_toda(page):
     found = []
     for place in TODA_PLACES:
@@ -566,8 +586,8 @@ def fetch_toda(page):
                     names.append(n)
             for n in names:
                 page.get_by_role("button", name=re.compile(rf"^{re.escape(n)}$")).click()
-                if _toda_wait(page) != "calendar":
-                    raise RuntimeError(f"戸田市: {place} {n} のカレンダーを開けませんでした")
+                if not _toda_wait_calendar(page):
+                    raise RuntimeError(f"戸田市: {place} {n} のカレンダーを開けませんでした(画面: {_toda_screen_hint(page)})")
                 _toda_collect(page, place, found)
                 page.locator("#shisetsuReSelection").click()
                 for _ in range(34):              # 施設の一覧に戻るまで待つ
@@ -576,7 +596,7 @@ def fetch_toda(page):
                         break
                     page.wait_for_timeout(300)
         else:
-            raise RuntimeError(f"戸田市: {place} の画面を開けませんでした")
+            raise RuntimeError(f"戸田市: {place} の画面を開けませんでした({_toda_screen_hint(page)})")
     if not found:
         raise RuntimeError("戸田市: 空き状況を取得できませんでした(画面構造を確認してください)")
     print(f"[toda] {len(found)} コマ(うち空き {sum(1 for x in found if x['status'] == 'open')})")
