@@ -49,7 +49,6 @@ tr.full td:last-child{background:var(--full)}
 dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);max-width:90vw;width:360px}
 dialog::backdrop{background:rgba(0,0,0,.4)}
 .hint{font-size:.78rem;color:var(--sub);margin:10px 0 4px}
-.cmd{display:block;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:.74rem;word-break:break-all;margin:0 0 8px}
 .go{display:block;text-align:center;background:var(--accent);color:#fff;border-radius:8px;padding:10px;text-decoration:none;margin:12px 0 8px}
 </style>
 </head>
@@ -125,26 +124,14 @@ function applyView() {
   $("compact").style.display = compact ? "block" : "none";
   document.querySelector(".tablewrap").style.display = compact ? "none" : "block";
 }
-function copyCmd() {
-  const t = $("cmdText").textContent;
-  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(
-    () => { $("copyBtn").textContent = "コピーしました"; },
-    () => { window.prompt("コピーして使ってください", t); });
-}
 function openDetail(s) {
   const src = (state.data.sources || []).find(x => x.id === s.source) || (state.data.sources || [])[0];
-  let assist = "";
-  if (s.source === "kawaguchi" && s.status === "open" && /\d+:\d+〜\d+:\d+/.test(s.period)) {
-    const py = /Mac|iPhone|iPad/.test(navigator.platform) ? "python3" : "python";
-    const cmd = `${py} assist.py ${s.date} "${s.ground}" "${s.court}" "${s.period}"`;
-    assist = `<p class="hint">自分のパソコンで予約画面まで進める(assist.py があるフォルダで実行)</p><code class="cmd" id="cmdText">${cmd}</code><button class="chip" id="copyBtn" onclick="copyCmd()">コマンドをコピー</button>`;
-  }
   let how = "";
   if (s.source === "kawaguchi" && s.status === "open") {
     const dd = new Date(s.date + "T00:00:00");
     how = `<p class="hint">予約サイトでの選び方:<br>①「施設を検索する」→「${s.ground}」にチェック<br>②「空き状況を確認する」→ ${dd.getMonth() + 1}/${dd.getDate()} を選択<br>③「時間選択画面へ」→ ${s.period}</p>`;
   }
-  $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${STL[s.status] || "予約済み"}</p>${how}${assist}`;
+  $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${STL[s.status] || "予約済み"}</p>${how}`;
   const book = BOOK[s.source];
   $("dlgLink").href = book ? book.url : (src ? src.url : "#");
   $("dlgLink").textContent = book ? book.label : "予約システムで予約・申請";
