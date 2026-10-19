@@ -139,16 +139,18 @@ function openDetail(s) {
     const cmd = `${py} assist.py ${s.date} "${s.ground}" "${s.court}" "${s.period}"`;
     assist = `<p class="hint">自分のパソコンで予約画面まで進める(assist.py があるフォルダで実行)</p><code class="cmd" id="cmdText">${cmd}</code><button class="chip" id="copyBtn" onclick="copyCmd()">コマンドをコピー</button>`;
   }
-  $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${STL[s.status] || "予約済み"}</p>${assist}`;
+  let how = "";
+  if (s.source === "kawaguchi" && s.status === "open") {
+    const dd = new Date(s.date + "T00:00:00");
+    how = `<p class="hint">予約サイトでの選び方:<br>①「施設を検索する」→「${s.ground}」にチェック<br>②「空き状況を確認する」→ ${dd.getMonth() + 1}/${dd.getDate()} を選択<br>③「時間選択画面へ」→ ${s.period}</p>`;
+  }
+  $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${STL[s.status] || "予約済み"}</p>${how}${assist}`;
   const book = BOOK[s.source];
   $("dlgLink").href = book ? book.url : (src ? src.url : "#");
   $("dlgLink").textContent = book ? book.label : "予約システムで予約・申請";
   $("dlg").showModal();
 }
-// 予約サイトへのリンク。川口市は、使用目的「野球」を選択済みの画面を開く
-const BOOK = {
-  kawaguchi: { url: "https://kawaguchi-city.rakuriza.jp/?purpose=1%2C2%2C3%2C4&page=1&per_page=30", label: "川口市の予約サイトへ(使用目的は選択済み)" },
-};
+const BOOK = {};   // 予約サイトへの専用リンクが必要になったら、ここに { 施設ID: {url, label} } を追加する
 const OPENISH = ["open", "lottery", "outside"];
 const fmt = iso => iso ? new Date(iso).toLocaleString("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }) : null;
 function renderSources(d) {
