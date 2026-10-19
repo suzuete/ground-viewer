@@ -561,8 +561,8 @@ def fetch_toda(page):
         elif state == "facilities":              # 施設の一覧から「野球場…」を1つずつ調べる
             names = []
             for b in page.get_by_role("button", name=re.compile(r"^野球場")).all():
-                n = b.inner_text().strip()
-                if n not in names:
+                n = (b.get_attribute("value") or b.inner_text() or "").strip()   # <input type="button"> は value に文字が入る
+                if n and n not in names:
                     names.append(n)
             for n in names:
                 page.get_by_role("button", name=re.compile(rf"^{re.escape(n)}$")).click()
