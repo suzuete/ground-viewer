@@ -131,6 +131,10 @@ function openDetail(s) {
     const dd = new Date(s.date + "T00:00:00");
     how = `<p class="hint">予約サイトでの選び方:<br>①「施設を検索する」→「${s.ground}」にチェック<br>②「空き状況を確認する」→ ${dd.getMonth() + 1}/${dd.getDate()} を選択<br>③「時間選択画面へ」→ ${s.period}</p>`;
   }
+  if (s.source === "toda" && s.status === "open") {
+    const dd = new Date(s.date + "T00:00:00");
+    how = `<p class="hint">予約サイトでの選び方:<br>①「検索」→「${s.ground}」${s.court && s.court !== "野球場" ? `→「${s.court}」` : ""}<br>②カレンダーで ${dd.getMonth() + 1}/${dd.getDate()} の ${s.period} を選択</p>`;
+  }
   $("dlgBody").innerHTML = `<h3>${s.ground} ${s.court || ""}</h3><p>${s.date}　${s.period}<br>状況: ${STL[s.status] || "予約済み"}</p>${how}`;
   const book = BOOK[s.source];
   $("dlgLink").href = book ? book.url : (src ? src.url : "#");

@@ -11,6 +11,8 @@ fetch_kawaguchi / fetch_toda の中身は、各サイトの画面に合わせて
 """
 import json
 import os
+import re
+import unicodedata
 from datetime import date, datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 
@@ -46,6 +48,70 @@ BATCH_SIZE = 10          # 日付を同時に選べる上限(サイトの仕様:
 
 def is_weekend_or_holiday(d):
     return d.weekday() >= 5 or (jpholiday is not None and jpholiday.is_holiday(d))
+
+
+NOTIFY = True             # 新しい空きが出たら通知ファイル(notify.json)を作る → ワークフローがGitHubのIssueにする
+NOTIFY_WEEKDAYS = False   # True にすると、平日の空きも通知する(Falseなら土日祝のみ)
+NOTIFY_FILE = "notify.json"
+DOW_JA = "月火水木金土日"
+
+
+def find_new_open(old_slots, new_slots):
+    """前回と比べて、新しく空いた枠を返す。
+    ・前回は空きでなかった枠(満席・受付前など)が空いた
+    ・前回は無かった枠が出て、同じ日・施設・面に、前回は空きが1つも無かった
+    (「要確認」から時間帯の表示に変わっただけのときは、新しい空きとみなさない)"""
+    k = lambda s: (s["source"], s["date"], s["ground"], s["court"], s["period"])
+    b = lambda s: (s["source"], s["date"], s["ground"], s["court"])
+    old_status = {k(s): s["status"] for s in old_slots}
+    old_open_blocks = {b(s) for s in old_slots if s["status"] == "open"}
+    out = []
+    for s in new_slots:
+        if s["status"] != "open":
+            continue
+        if not NOTIFY_WEEKDAYS and not is_weekend_or_holiday(date.fromisoformat(s["date"])):
+            continue
+        if k(s) in old_status:
+            if old_status[k(s)] != "open":
+                out.append(s)
+        elif b(s) not in old_open_blocks:
+            out.append(s)
+    return out
+
+
+def write_notification(new, source_names, test=False):
+    owner = os.environ.get("GITHUB_REPOSITORY_OWNER", "")
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    mention = f"@{owner} " if owner else ""
+    site = f"https://{owner}.github.io/{repo.split('/')[-1]}/" if owner and repo else ""
+    if test:
+        title = "【テスト】空き通知の確認"
+        body = f"{mention}これは通知のテストです。このメールが届けば、設定は成功しています。"
+    else:
+        lines, shown = [], 0
+        by_date = {}
+        for s in sorted(new, key=lambda s: (s["date"], s["ground"], s["court"], s["period"])):
+            by_date.setdefault(s["date"], {}).setdefault(
+                (source_names.get(s["source"], s["source"]), s["ground"], s["court"]), []).append(s["period"])
+        for d, groups in by_date.items():
+            dt = date.fromisoformat(d)
+            lines.append(f"\n**{dt.month}/{dt.day}({DOW_JA[dt.weekday()]})**")
+            for (src, g, c), periods in groups.items():
+                if shown >= 30:
+                    break
+                lines.append(f"- {src} {g} {c}: " + " / ".join(periods))
+                shown += 1
+        if shown < len({(s["date"], s["ground"], s["court"]) for s in new}):
+            lines.append("\nほかにも空きがあります。サイトで確認してください。")
+        first = sorted(new, key=lambda s: (s["date"], s["ground"]))[0]
+        fd = date.fromisoformat(first["date"])
+        title = f"【空き通知】{len(new)}枠 {fd.month}/{fd.day}({DOW_JA[fd.weekday()]}) {first['ground']} ほか"
+        body = f"{mention}新しい空きが出ました。\n" + "\n".join(lines) + (f"\n\n一覧: {site}" if site else "")
+    with open(NOTIFY_FILE, "w", encoding="utf-8") as f:
+        json.dump({"title": title, "body": body}, f, ensure_ascii=False)
+    plain = (title + "\n" + body).replace("**", "").replace(mention, "")   # LINE用(装飾なしの文章)
+    with open("notify_line.txt", "w", encoding="utf-8") as f:
+        f.write(plain)
 
 
 def holidays_between(start, end):
@@ -280,16 +346,64 @@ def is_outside_acceptance(d, today):
     return d.year * 12 + d.month > today.year * 12 + today.month + ACCEPT_MONTHS_AHEAD
 
 
-def _fetch_time_details(page, targets, size, detailed):
+TEMPLATES = {}            # {"施設|面": ["9:00〜11:00", ...]} 時間割(受付期間外の日の表示に使う)
+OUTSIDE_DETAIL = True     # 受付期間外の日も、時間選択画面から時間帯を取得してみる
+
+
+def _fetch_time_details(page, targets, size, detailed, stop_on_error=False):
+    """日付を選んで時間選択画面を読み、detailed に追加する。stop_on_error時は、失敗したら False を返して中止。"""
     for i in range(0, len(targets), size):
         batch = targets[i:i + size]
         try:
             _open_results(page)                # 毎回最初からやり直す(状態を引きずらない)
             if _select_dates(page, batch) == 0:
+                if stop_on_error:
+                    return False
                 continue
             detailed.update(_time_slots(_read_time_page(page)))
         except Exception as e:
             print(f"[kawaguchi] 時間帯の取得に失敗(日単位の表示で代用): {e}")
+            if stop_on_error:
+                return False
+    return True
+
+
+def _learn_templates(slots_by_key):
+    """取得できた時間帯から、施設・面ごとの時間割を覚える。"""
+    for slots in slots_by_key.values():
+        by_court = {}
+        for s in slots:
+            by_court.setdefault((s["ground"], s["court"]), []).append(s["period"])
+        for (g, c), periods in by_court.items():
+            if periods:
+                TEMPLATES[f"{g}|{c}"] = periods
+
+
+def _assemble(found, detailed, outside_detail, today):
+    result = []
+    for key in sorted(found):
+        d, g, c = key
+        st = found[key]["status"]
+        outside = st == "outside" or (st == "open" and is_outside_acceptance(date.fromisoformat(d), today))
+        if outside:                            # まだ受付が始まっていない日
+            if key in outside_detail:
+                result += outside_detail[key]
+            elif TEMPLATES.get(f"{g}|{c}"):    # 取れない場合は、同じ施設の時間割で表示
+                result += [slot(d, g, c, p, "outside", "kawaguchi") for p in TEMPLATES[f"{g}|{c}"]]
+            else:
+                result.append(slot(d, g, c, "受付期間外", "outside", "kawaguchi"))
+        elif st == "open":
+            if key in detailed:
+                result += detailed[key]
+            else:                              # 時間帯を調べなかった日
+                result.append(slot(d, g, c, "要確認", "open", "kawaguchi"))
+        elif st == "full":
+            result.append(slot(d, g, c, "終日", "full", "kawaguchi"))
+        elif st == "lottery":
+            result.append(slot(d, g, c, "抽選", "lottery", "kawaguchi"))
+        elif st == "closed":
+            result.append(slot(d, g, c, "休館", "closed", "kawaguchi"))
+    return result
 
 
 def fetch_kawaguchi(page):
@@ -297,16 +411,22 @@ def fetch_kawaguchi(page):
     found = _crawl_calendars(page)
     today = datetime.now(JST).date()
 
-    detailed = {}
+    detailed, outside_detail = {}, {}
     if TIME_DETAIL:
         horizon = today + timedelta(days=TIME_HORIZON_DAYS)
-        targets = sorted(
-            (v["idx"], date.fromisoformat(k[0]), k[1], k[2]) for k, v in found.items()
-            if v["status"] == "open"
-            and (TIME_WEEKDAYS or is_weekend_or_holiday(date.fromisoformat(k[0])))
-            and date.fromisoformat(k[0]) <= horizon
-            and not is_outside_acceptance(date.fromisoformat(k[0]), today))
+        targets, outside_targets = [], []
+        for (d_s, g, c), v in found.items():
+            d = date.fromisoformat(d_s)
+            if v["status"] != "open" or not (TIME_WEEKDAYS or is_weekend_or_holiday(d)):
+                continue
+            if is_outside_acceptance(d, today):
+                outside_targets.append((v["idx"], d, g, c))
+            elif d <= horizon:
+                targets.append((v["idx"], d, g, c))
+        targets.sort()
+        outside_targets.sort()
         key_of = lambda t: (t[1].isoformat(), t[2], t[3])
+
         _fetch_time_details(page, targets, BATCH_SIZE, detailed)
         missing = [t for t in targets if key_of(t) not in detailed]
         if missing:                            # 取れなかった分は、少人数でやり直す
@@ -316,33 +436,151 @@ def fetch_kawaguchi(page):
         print(f"[kawaguchi] 時間帯を取得できた枠: {len(targets) - len(missing)} / {len(targets)}")
         for t in missing:
             print(f"  未取得: {t[1]} {t[2]} {t[3]}")
+        _learn_templates(detailed)
 
-    result = []
-    for key in sorted(found):
-        d, g, c = key
-        st = found[key]["status"]
-        if st == "open":
-            if is_outside_acceptance(date.fromisoformat(d), today):
-                result.append(slot(d, g, c, "受付期間外", "outside", "kawaguchi"))
-            elif key in detailed:
-                result += detailed[key]
-            else:                              # 時間帯を調べなかった日(平日など)
-                result.append(slot(d, g, c, "要確認", "open", "kawaguchi"))
-        elif st == "full":
-            result.append(slot(d, g, c, "終日", "full", "kawaguchi"))
-        elif st == "lottery":
-            result.append(slot(d, g, c, "抽選", "lottery", "kawaguchi"))
-        elif st == "outside":
-            result.append(slot(d, g, c, "受付期間外", "outside", "kawaguchi"))
-        elif st == "closed":
-            result.append(slot(d, g, c, "休館", "closed", "kawaguchi"))
-    return result
+        if OUTSIDE_DETAIL and outside_targets:   # 受付期間外の日の時間帯
+            ok = _fetch_time_details(page, outside_targets, BATCH_SIZE, outside_detail, stop_on_error=True)
+            for slots in outside_detail.values():
+                for sl in slots:
+                    if sl["status"] == "open":
+                        sl["status"] = "outside"   # まだ予約できない
+            got = sum(1 for t in outside_targets if key_of(t) in outside_detail)
+            note = "" if ok else "(取得できないため、同じ施設の時間割で代用)"
+            print(f"[kawaguchi] 受付期間外の日の時間帯: {got} / {len(outside_targets)}{note}")
+            _learn_templates(outside_detail)
+
+    return _assemble(found, detailed, outside_detail, today)
+
+
+# ---------------- 戸田市 ----------------
+TODA_URL = "https://yoyaku.city.toda.saitama.jp/yoyaku/"
+TODA_PLACES = ["道満グリーンパーク", "北部公園野球場", "笹目公園野球場"]   # 取得する場所(施設の中の「野球場」を全て調べる)
+
+# 表示中のカレンダー(1週間分)から、開始日・場所・施設・各コマの状態を読む
+_JS_TODA = r"""
+() => {
+  const inp = document.querySelector('input[name$="displayStartDate"]');
+  const body = document.body.innerText;
+  const pick = re => ((body.match(re) || [])[1] || '').replace(/(場所を再選択|施設を再選択)\s*$/, '').trim();
+  const rows = [...document.querySelectorAll('#areaToKomaDisplay tr')].map(tr =>
+    [...tr.children].map(td => ({
+      t: td.getAttribute('data-original-title') || td.getAttribute('title') || '',
+      s: td.getAttribute('initialdisplay') || (td.querySelector('.komaStatus')?.textContent || '').trim()
+    })));
+  return {start: inp ? inp.value : '', place: pick(/選択中の場所：([^\n]*)/), fac: pick(/選択中の施設：([^\n]*)/), rows};
+}
+"""
+
+
+def _toda_status(sym):
+    if "○" in sym or "◯" in sym:
+        return "open"
+    if "×" in sym:
+        return "full"
+    if "抽" in sym:
+        return "lottery"
+    if any(k in sym for k in ("整備", "休", "閉", "不可")):
+        return "closed"
+    return None                                # 「―」など(過去のコマ・対象外)は記録しない
+
+
+def _toda_time(t):
+    m = re.findall(r"(\d{1,2}):(\d{2})", t)
+    return f"{int(m[0][0])}:{m[0][1]}〜{int(m[1][0])}:{m[1][1]}" if len(m) == 2 else t
+
+
+def _toda_slots_from_info(info, place, today, limit):
+    """読み取った1週間分 → ([slot...], 記録できる状態が1つでもあったか, 開始日)"""
+    try:
+        start = datetime.strptime(info["start"], "%Y/%m/%d").date()
+    except ValueError:
+        return [], False, None
+    court = unicodedata.normalize("NFKC", info["fac"]) or "野球場"
+    out = []
+    for row in info["rows"]:
+        label = next((c["t"] for c in row if c["t"]), "")
+        for k, c in enumerate(row):
+            d = start + timedelta(days=k)
+            st = _toda_status(c["s"])
+            if st is None or not (today <= d <= limit):
+                continue
+            out.append(slot(d.isoformat(), place, court, _toda_time(c["t"] or label), st, "toda"))
+    return out, bool(out), start
+
+
+def _toda_next(page, info):
+    nxt = page.locator("a.clickable", has=page.locator("i.fa-arrow-circle-right"))
+    if nxt.count() == 0:
+        return None
+    before = info["start"]
+    nxt.first.click()
+    for _ in range(15):                          # 画面が切り替わるまで最大4.5秒待つ
+        page.wait_for_timeout(300)
+        new = page.evaluate(_JS_TODA)
+        if new["start"] != before:
+            return new
+    return None
+
+
+def _toda_collect(page, place, found):
+    today = datetime.now(JST).date()
+    limit = today + timedelta(days=HORIZON_DAYS)
+    info = page.evaluate(_JS_TODA)
+    for _ in range(MAX_PAGES):
+        got, any_status, start = _toda_slots_from_info(info, place, today, limit)
+        found += got
+        if start is None or start + timedelta(days=6) >= limit:
+            break
+        if not any_status and start > today:     # 先の週が全部「―」なら、これ以上は受付前
+            break
+        info = _toda_next(page, info)
+        if info is None:
+            break
+
+
+def _toda_wait(page):
+    """場所を選んだあとの画面を待つ。'calendar'(カレンダー)か 'facilities'(施設の一覧)を返す。"""
+    for _ in range(34):
+        if page.locator("#areaToKomaDisplay").count() > 0:
+            return "calendar"
+        if page.get_by_role("button", name=re.compile(r"^野球場")).count() > 0:
+            return "facilities"
+        page.wait_for_timeout(300)
+    return None
 
 
 def fetch_toda(page):
-    page.goto("https://yoyaku.city.toda.saitama.jp/yoyaku/")
-    # TODO: 同上。9時台以外は画面が開かないため、稼働時間内に実行すること
-    raise NotImplementedError("戸田市の操作手順を実装してください")
+    found = []
+    for place in TODA_PLACES:
+        page.goto(TODA_URL, wait_until="domcontentloaded", timeout=60000)
+        page.locator("#searchButton").click()
+        page.get_by_role("button", name=place, exact=True).click()
+        state = _toda_wait(page)
+        if state == "calendar":                  # 施設が1つだけの場所は、すぐカレンダーが出る
+            _toda_collect(page, place, found)
+        elif state == "facilities":              # 施設の一覧から「野球場…」を1つずつ調べる
+            names = []
+            for b in page.get_by_role("button", name=re.compile(r"^野球場")).all():
+                n = b.inner_text().strip()
+                if n not in names:
+                    names.append(n)
+            for n in names:
+                page.get_by_role("button", name=re.compile(rf"^{re.escape(n)}$")).click()
+                if _toda_wait(page) != "calendar":
+                    raise RuntimeError(f"戸田市: {place} {n} のカレンダーを開けませんでした")
+                _toda_collect(page, place, found)
+                page.locator("#shisetsuReSelection").click()
+                for _ in range(34):              # 施設の一覧に戻るまで待つ
+                    if page.locator("#areaToKomaDisplay").count() == 0 and \
+                            page.get_by_role("button", name=re.compile(r"^野球場")).count() > 0:
+                        break
+                    page.wait_for_timeout(300)
+        else:
+            raise RuntimeError(f"戸田市: {place} の画面を開けませんでした")
+    if not found:
+        raise RuntimeError("戸田市: 空き状況を取得できませんでした(画面構造を確認してください)")
+    print(f"[toda] {len(found)} コマ(うち空き {sum(1 for x in found if x['status'] == 'open')})")
+    return found
 
 
 # window: 実行を許可する日本時間の時間帯(開始時, 終了時)。None なら常時
@@ -366,6 +604,11 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError):
         old = {}
 
+    TEMPLATES.update(old.get("slot_templates", {}))
+    old_slots = old.get("slots", [])
+    for fn in (NOTIFY_FILE, "notify_line.txt"):
+        if os.path.exists(fn):
+            os.remove(fn)
     status = old.get("source_status", {})
     slots_by_src = {s["id"]: [] for s in SOURCES}
     for s in old.get("slots", []):
@@ -397,10 +640,21 @@ def main():
         "sources": [{"id": s["id"], "name": s["name"], "url": s["url"],
                      "interval_min": s["interval_min"], "hours": s["hours"]} for s in SOURCES],
         "source_status": status,
+        "slot_templates": TEMPLATES,
         "slots": [x for lst in slots_by_src.values() for x in lst],
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
+
+    names = {x["id"]: x["name"] for x in SOURCES}
+    if os.environ.get("NOTIFY_TEST") == "true":
+        write_notification([], names, test=True)
+        print("[notify] テスト通知を作成しました")
+    elif NOTIFY and old_slots:             # 初回(前回データなし)は通知しない
+        new = find_new_open(old_slots, out["slots"])
+        if new:
+            write_notification(new, names)
+            print(f"[notify] 新しい空き {len(new)} 枠を通知します")
 
 
 if __name__ == "__main__":
