@@ -61,23 +61,6 @@ jobs:
             -Headers @{ Authorization = "Bearer $env:GH_TOKEN"; Accept = "application/vnd.github+json" } `
             -ContentType "application/json; charset=utf-8" `
             -InFile notify.json
-      - name: notify-line
-        if: hashFiles('notify_line.txt') != ''
-        continue-on-error: true
-        shell: powershell
-        env:
-          LINE_TOKEN: ${{ secrets.LINE_CHANNEL_TOKEN }}
-          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: |
-          if (-not $env:LINE_TOKEN -or -not $env:LINE_USER_ID) { Write-Host "LINEの設定が無いのでスキップします"; exit 0 }
-          [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-          $text = Get-Content notify_line.txt -Raw -Encoding UTF8
-          if ($text.Length -gt 4500) { $text = $text.Substring(0, 4500) }
-          $payload = @{ to = $env:LINE_USER_ID; messages = @(@{ type = "text"; text = $text }) } | ConvertTo-Json -Depth 5
-          Invoke-RestMethod -Method Post -Uri "https://api.line.me/v2/bot/message/push" `
-            -Headers @{ Authorization = "Bearer $env:LINE_TOKEN" } `
-            -ContentType "application/json; charset=utf-8" `
-            -Body ([System.Text.Encoding]::UTF8.GetBytes($payload))
       - name: notify-mail
         if: hashFiles('notify_line.txt') != ''
         continue-on-error: true
