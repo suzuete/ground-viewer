@@ -48,6 +48,19 @@ tr.full td:last-child{background:var(--full)}
 .empty{padding:24px;text-align:center;color:var(--sub)}
 dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);max-width:90vw;width:360px}
 dialog::backdrop{background:rgba(0,0,0,.4)}
+#rulesDlg{width:min(560px,94vw);max-height:90vh;overflow:auto}
+.rule{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px}
+.rhead{display:flex;gap:8px;margin-bottom:6px}
+.rname{flex:1;border:1px solid var(--line);border-radius:6px;padding:5px 8px;background:var(--bg);color:var(--text);font:inherit}
+.rlabel{font-size:.78rem;color:var(--sub);margin:8px 0 4px}
+.rchips{display:flex;flex-wrap:wrap;gap:6px}
+.rchip{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:999px;padding:3px 10px;font-size:.82rem;cursor:pointer;font-family:inherit}
+.rchip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.rtime{margin-top:10px;font-size:.85rem}
+.rtime select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:3px}
+.rdel,.rbtn{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:8px;padding:5px 10px;font-size:.82rem;cursor:pointer;text-decoration:none;font-family:inherit;display:inline-block}
+#rulesJson{width:100%;height:110px;font-size:.72rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;box-sizing:border-box}
+.rfoot{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .hint{font-size:.78rem;color:var(--sub);margin:10px 0 4px}
 .go{display:block;text-align:center;background:var(--accent);color:#fff;border-radius:8px;padding:10px;text-decoration:none;margin:12px 0 8px}
 </style>
@@ -58,6 +71,7 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
   <div class="meta">空き枠: <b id="count">読み込み中…</b></div>
   <div class="meta" id="srcStatus"></div>
   <div class="links" id="links"></div>
+  <div class="links"><button class="rbtn" id="rulesBtn">通知条件の設定</button></div>
   <div id="banner"></div>
 
   <div class="panel">
@@ -86,6 +100,20 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
   <div id="dlgBody"></div>
   <a class="go" id="dlgLink" target="_blank" rel="noopener">予約システムで予約・申請</a>
   <button class="chip" onclick="dlg.close()">閉じる</button>
+</dialog>
+
+<dialog id="rulesDlg">
+  <h3>通知条件の設定</h3>
+  <p class="hint">新しい空きが、下のどれか1つの条件に当てはまれば、メール(とLINE)で通知します。条件の中で選んだ項目は、すべて当てはまる必要があります。</p>
+  <div id="rulesBody"></div>
+  <button class="rbtn" id="addRule">＋ 条件を追加</button>
+  <p class="hint">反映のしかた: 「条件をコピー」→「GitHubで編集画面を開く」→ 中身を全部消して貼り付け →「Commit changes」。次の自動実行から使われます。</p>
+  <textarea id="rulesJson" readonly></textarea>
+  <div class="rfoot">
+    <button class="rbtn" id="copyRules">条件をコピー</button>
+    <a class="rbtn" id="editRules" target="_blank" rel="noopener">GitHubで編集画面を開く</a>
+    <button class="rbtn" id="closeRules">閉じる</button>
+  </div>
 </dialog>
 
 <script>
@@ -247,6 +275,81 @@ document.addEventListener("click", e => {
   }
 });
 $("onlyOpen").addEventListener("change", render);
+// ---- 通知条件の設定 ----
+const DAYS = ["月", "火", "水", "木", "金", "土", "日", "祝"];
+let rules = [];
+const newRule = () => ({ name: "", sources: [], days: [], grounds: [], after: "", before: "" });
+async function loadRules() {
+  try {
+    const d = await (await fetch("notify_rules.json?t=" + Date.now())).json();
+    rules = (d.rules || []).map(x => ({ name: x.name || "", sources: x.sources || [], days: x.days || [], grounds: x.grounds || [], after: x.after || "", before: x.before || "" }));
+  } catch (e) { rules = []; }
+  if (!rules.length) rules = [newRule()];
+}
+const rchip = (i, k, v, label, on) => `<button class="rchip${on ? " on" : ""}" data-r="${i}" data-k="${k}" data-v="${v}">${label}</button>`;
+const hourOptions = sel => '<option value="">指定なし</option>' + [...Array(16)].map((_, i) => {
+  const v = String(i + 6).padStart(2, "0") + ":00";
+  return `<option value="${v}"${sel === v ? " selected" : ""}>${i + 6}:00</option>`;
+}).join("");
+function rulesJson() {
+  const out = rules.map(r => {
+    const o = {};
+    if (r.name) o.name = r.name;
+    if (r.sources.length) o.sources = r.sources;
+    if (r.days.length) o.days = r.days;
+    if (r.grounds.length) o.grounds = r.grounds;
+    if (r.after) o.after = r.after;
+    if (r.before) o.before = r.before;
+    return Object.keys(o).length ? o : { name: "すべて" };
+  });
+  return JSON.stringify({ "_説明": "どれか1つの条件に当てはまる、新しい空きがあれば通知します。画面の「通知条件の設定」から作れます。", rules: out }, null, 2);
+}
+function renderRules() {
+  const grounds = [...new Set(state.data.slots.map(s => s.ground))].sort();
+  const srcs = state.data.sources || [];
+  $("rulesBody").innerHTML = rules.map((r, i) => `<div class="rule" data-r="${i}">
+    <div class="rhead"><input class="rname" data-f="name" value="${r.name.replace(/"/g, "&quot;")}" placeholder="メモ(例: 土曜の夕方)"><button class="rdel" data-del="${i}">削除</button></div>
+    <div class="rlabel">市(選ばなければ両方)</div><div class="rchips">${srcs.map(s => rchip(i, "sources", s.id, s.name, r.sources.includes(s.id))).join("")}</div>
+    <div class="rlabel">曜日(選ばなければすべて)</div><div class="rchips">${DAYS.map(d => rchip(i, "days", d, d, r.days.includes(d))).join("")}</div>
+    <div class="rlabel">グラウンド(選ばなければすべて)</div><div class="rchips">${grounds.map(g => rchip(i, "grounds", g, g, r.grounds.includes(g))).join("")}</div>
+    <div class="rtime">開始時刻 <select data-f="after">${hourOptions(r.after)}</select> 以降 〜 <select data-f="before">${hourOptions(r.before)}</select> より前</div>
+  </div>`).join("");
+  $("rulesJson").value = rulesJson();
+}
+document.addEventListener("click", e => {
+  const c = e.target.closest(".rchip");
+  if (c) {
+    const a = rules[+c.dataset.r][c.dataset.k], v = c.dataset.v, idx = a.indexOf(v);
+    idx >= 0 ? a.splice(idx, 1) : a.push(v);
+    renderRules();
+    return;
+  }
+  const del = e.target.closest("[data-del]");
+  if (del) { rules.splice(+del.dataset.del, 1); if (!rules.length) rules.push(newRule()); renderRules(); }
+});
+$("rulesBody").addEventListener("input", e => {
+  const f = e.target.dataset.f;
+  if (!f) return;
+  rules[+e.target.closest(".rule").dataset.r][f] = e.target.value;
+  $("rulesJson").value = rulesJson();
+});
+$("addRule").onclick = () => { rules.push(newRule()); renderRules(); };
+$("closeRules").onclick = () => $("rulesDlg").close();
+$("copyRules").onclick = () => {
+  const t = $("rulesJson").value;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(
+    () => { $("copyRules").textContent = "コピーしました"; },
+    () => { $("rulesJson").select(); });
+};
+$("rulesBtn").onclick = async () => {
+  await loadRules();
+  renderRules();
+  $("copyRules").textContent = "条件をコピー";
+  const owner = location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0] : "";
+  const repo = location.pathname.split("/")[1] || "";
+  $("editRules").href = owner && repo ? `https://github.com/${owner}/${repo}/edit/main/notify_rules.json` : "#";
+  $("rulesDlg").showModal();
+};
 load();
 </script>
 </body>

@@ -56,6 +56,66 @@ NOTIFY_FILE = "notify.json"
 DOW_JA = "月火水木金土日"
 
 
+RULES_FILE = "notify_rules.json"   # 通知の条件(曜日・施設・時間帯)。GitHub上で編集できる
+RULES = None                       # main() が読み込む。None のときは標準の条件(NOTIFY_WEEKDAYS)を使う
+
+
+def load_rules():
+    try:
+        with open(RULES_FILE, encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return None
+    except Exception as e:
+        print(f"[notify] {RULES_FILE} を読めません({e})。標準の条件で通知します")
+        return None
+    rules = data.get("rules") if isinstance(data, dict) else None
+    if not rules:
+        print(f"[notify] {RULES_FILE} に条件(rules)がありません。標準の条件で通知します")
+        return None
+    return rules
+
+
+def _norm_period(p):
+    p = unicodedata.normalize("NFKC", str(p)).replace("~", "〜").replace(" ", "")
+    return re.sub(r"(?<!\d)0(\d):", r"\1:", p)
+
+
+def _minutes(t):
+    m = re.match(r"\s*(\d{1,2}):(\d{2})", unicodedata.normalize("NFKC", str(t)))
+    return int(m.group(1)) * 60 + int(m.group(2)) if m else None
+
+
+def matches_rules(s, rules):
+    """どれか1つの条件に当てはまれば True。1つの条件の中では、書いた項目がすべて当てはまる必要がある。"""
+    d = date.fromisoformat(s["date"])
+    for r in rules:
+        if r.get("sources") and s["source"] not in r["sources"]:
+            continue
+        if r.get("days"):
+            tags = {DOW_JA[d.weekday()]}
+            if jpholiday is not None and jpholiday.is_holiday(d):
+                tags.add("祝")
+            if not (tags & set(r["days"])):
+                continue
+        if r.get("grounds") and not any(g in s["ground"] for g in r["grounds"]):
+            continue
+        if r.get("courts") and not any(c in s["court"] for c in r["courts"]):
+            continue
+        if r.get("times") or r.get("after") or r.get("before"):
+            start = _minutes(s["period"])
+            if start is None:
+                continue                       # 時間帯が分からない枠(要確認など)は、時間の条件がある場合は対象外
+            if r.get("times") and _norm_period(s["period"]) not in [_norm_period(t) for t in r["times"]]:
+                continue
+            if r.get("after") and start < _minutes(r["after"]):
+                continue
+            if r.get("before") and start >= _minutes(r["before"]):
+                continue
+        return True
+    return False
+
+
 def find_new_open(old_slots, new_slots):
     """前回と比べて、新しく空いた枠を返す。
     ・前回は空きでなかった枠(満席・受付前など)が空いた
@@ -69,7 +129,10 @@ def find_new_open(old_slots, new_slots):
     for s in new_slots:
         if s["status"] != "open":
             continue
-        if not NOTIFY_WEEKDAYS and not is_weekend_or_holiday(date.fromisoformat(s["date"])):
+        if RULES is not None:
+            if not matches_rules(s, RULES):
+                continue
+        elif not NOTIFY_WEEKDAYS and not is_weekend_or_holiday(date.fromisoformat(s["date"])):
             continue
         if k(s) in old_status:
             if old_status[k(s)] != "open":
@@ -625,6 +688,8 @@ def main():
         old = {}
 
     TEMPLATES.update(old.get("slot_templates", {}))
+    global RULES
+    RULES = load_rules()
     old_slots = old.get("slots", [])
     for fn in (NOTIFY_FILE, "notify_line.txt"):
         if os.path.exists(fn):
