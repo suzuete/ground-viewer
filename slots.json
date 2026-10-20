@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T10:19:22.621515+09:00",
+ "updated": "2026-10-20T10:57:19.073177+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-20T10:19:22.621515+09:00",
+   "at": "2026-10-20T10:57:19.073177+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-10-20T10:19:22.621515+09:00",
+   "at": "2026-10-20T10:57:19.073177+09:00",
    "error": null
   }
  },
@@ -5972,31 +5972,7 @@
    "date": "2026-11-16",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "9:00〜12:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "18:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
@@ -6244,32 +6220,8 @@
    "date": "2026-11-17",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "9:00〜12:00",
+   "period": "終日",
    "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "18:00〜21:00",
-   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -14037,7 +13989,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "14:00〜16:00",
-   "status": "open",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -14093,7 +14045,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "16:00〜18:00",
-   "status": "open",
+   "status": "full",
    "source": "toda"
   },
   {
