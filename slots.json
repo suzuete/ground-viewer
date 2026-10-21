@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T23:17:14.354261+09:00",
+ "updated": "2026-10-21T23:57:08.553294+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-21T23:17:14.354261+09:00",
+   "at": "2026-10-21T23:57:08.553294+09:00",
    "error": null
   },
   "toda": {
-   "ok": true,
+   "ok": false,
    "at": "2026-10-21T23:17:14.354261+09:00",
-   "error": null
+   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#searchButton\")\n"
   }
  },
  "slot_templates": {
