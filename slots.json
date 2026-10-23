@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T17:00:02.753497+09:00",
+ "updated": "2026-10-23T17:37:42.585451+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-23T17:00:02.753497+09:00",
+   "at": "2026-10-23T17:37:42.585451+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-10-23T17:00:02.753497+09:00",
+   "at": "2026-10-23T17:37:42.585451+09:00",
    "error": null
   }
  },
@@ -381,7 +381,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "9:00〜11:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -2516,8 +2516,32 @@
    "date": "2026-11-03",
    "ground": "芝スポーツセンター",
    "court": "野球場",
-   "period": "終日",
+   "period": "9:00〜11:00",
    "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -2532,7 +2556,31 @@
    "date": "2026-11-03",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
-   "period": "終日",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "13:00〜15:00",
+   "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "15:00〜17:00",
    "status": "full",
    "source": "kawaguchi"
   },
