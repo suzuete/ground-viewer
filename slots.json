@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T08:48:13.033423+09:00",
+ "updated": "2026-10-23T09:39:31.344126+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-23T08:48:13.033423+09:00",
+   "at": "2026-10-23T09:39:31.344126+09:00",
    "error": null
   },
   "toda": {
-   "ok": false,
-   "at": "2026-10-22T23:17:10.473246+09:00",
-   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#searchButton\")\n"
+   "ok": true,
+   "at": "2026-10-23T09:39:31.344126+09:00",
+   "error": null
   }
  },
  "slot_templates": {
@@ -157,7 +157,7 @@
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -213,7 +213,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -13497,14 +13497,6 @@
    "source": "kawaguchi"
   },
   {
-   "date": "2026-10-23",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
    "date": "2026-10-24",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
@@ -13545,50 +13537,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-23",
+   "date": "2026-10-29",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-24",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-25",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-26",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-28",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
+   "period": "8:00〜10:00",
    "status": "full",
    "source": "toda"
   },
@@ -13596,6 +13548,62 @@
    "date": "2026-10-23",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-24",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-25",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-26",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-27",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-28",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-29",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-23",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
    "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
@@ -13634,6 +13642,14 @@
   },
   {
    "date": "2026-10-28",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-29",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "12:00〜14:00",
@@ -13689,6 +13705,14 @@
    "source": "toda"
   },
   {
+   "date": "2026-10-29",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
    "date": "2026-10-23",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
@@ -13740,230 +13764,6 @@
    "date": "2026-10-29",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-30",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-31",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-02",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-03",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-04",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-29",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-30",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-31",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-02",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-03",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-04",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-29",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-30",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-31",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-02",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-03",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-04",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-29",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-30",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-31",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-02",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-03",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-04",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-29",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
    "period": "16:00〜18:00",
    "status": "open",
    "source": "toda"
@@ -13972,6 +13772,230 @@
    "date": "2026-10-30",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-31",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-01",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-02",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-03",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-04",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-05",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-10-30",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
    "period": "16:00〜18:00",
    "status": "open",
    "source": "toda"
@@ -13985,14 +14009,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-05",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-06",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
@@ -14041,10 +14057,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-05",
+   "date": "2026-11-12",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "10:00〜12:00",
+   "period": "8:00〜10:00",
    "status": "open",
    "source": "toda"
   },
@@ -14097,10 +14113,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-05",
+   "date": "2026-11-12",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "12:00〜14:00",
+   "period": "10:00〜12:00",
    "status": "open",
    "source": "toda"
   },
@@ -14153,10 +14169,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-05",
+   "date": "2026-11-12",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "14:00〜16:00",
+   "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
   },
@@ -14212,175 +14228,175 @@
    "date": "2026-11-12",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
    "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
   },
@@ -14436,175 +14452,175 @@
    "date": "2026-11-19",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "8:00〜10:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
    "period": "14:00〜16:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "8:00〜10:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "10:00〜12:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "道満グリーンパーク",
+   "court": "野球場A",
+   "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
   },
@@ -14660,7 +14676,7 @@
    "date": "2026-11-26",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
-   "period": "8:00〜10:00",
+   "period": "14:00〜16:00",
    "status": "open",
    "source": "toda"
   },
@@ -14697,14 +14713,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
@@ -14733,14 +14741,6 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
   },
@@ -14777,14 +14777,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "道満グリーンパーク",
    "court": "野球場A",
@@ -14817,14 +14809,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-10-25",
    "ground": "北部公園野球場",
    "court": "野球場",
@@ -14857,11 +14841,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "open",
+   "period": "8:30〜10:30",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -14897,10 +14881,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -14937,10 +14921,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -14977,10 +14961,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "17:00〜19:00",
+   "period": "14:30〜16:30",
    "status": "full",
    "source": "toda"
   },
@@ -15017,11 +15001,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -15060,8 +15044,8 @@
    "date": "2026-10-29",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
+   "period": "19:00〜21:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -15113,10 +15097,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
+   "period": "8:30〜10:30",
    "status": "full",
    "source": "toda"
   },
@@ -15169,10 +15153,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -15225,10 +15209,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -15281,11 +15265,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
+   "period": "14:30〜16:30",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -15337,10 +15321,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
+   "period": "17:00〜19:00",
    "status": "open",
    "source": "toda"
   },
@@ -15396,287 +15380,287 @@
    "date": "2026-11-05",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "北部公園野球場",
-   "court": "野球場",
    "period": "19:00〜21:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
    "status": "open",
    "source": "toda"
   },
@@ -15732,288 +15716,288 @@
    "date": "2026-11-12",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-15",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-16",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-17",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-18",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "北部公園野球場",
-   "court": "野球場",
    "period": "19:00〜21:00",
    "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-13",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-15",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-16",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-17",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-18",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-19",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -16068,288 +16052,288 @@
    "date": "2026-11-19",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-20",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-21",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-23",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-25",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-19",
-   "ground": "北部公園野球場",
-   "court": "野球場",
    "period": "19:00〜21:00",
    "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-21",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-24",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-25",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-26",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -16404,168 +16388,136 @@
    "date": "2026-11-26",
    "ground": "北部公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-27",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-28",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-29",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-30",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-27",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-28",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-29",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-30",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-27",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-28",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-29",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-30",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-27",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-28",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-29",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-30",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
+   "period": "19:00〜21:00",
    "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-27",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-30",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-27",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-30",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-27",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-30",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-27",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-28",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-29",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-30",
+   "ground": "北部公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "closed",
    "source": "toda"
   },
   {
@@ -16601,14 +16553,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "北部公園野球場",
-   "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "北部公園野球場",
    "court": "野球場",
@@ -16638,14 +16582,6 @@
    "court": "野球場",
    "period": "19:00〜21:00",
    "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-10-24",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
    "source": "toda"
   },
   {
@@ -16681,11 +16617,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
+   "period": "8:30〜10:30",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -16721,10 +16657,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -16761,10 +16697,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -16801,10 +16737,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "17:00〜19:00",
+   "period": "14:30〜16:30",
    "status": "full",
    "source": "toda"
   },
@@ -16841,11 +16777,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-24",
+   "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -16884,8 +16820,8 @@
    "date": "2026-10-29",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "open",
+   "period": "19:00〜21:00",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -16937,10 +16873,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
+   "period": "8:30〜10:30",
    "status": "full",
    "source": "toda"
   },
@@ -16993,10 +16929,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -17049,10 +16985,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -17105,11 +17041,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
+   "period": "14:30〜16:30",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -17161,11 +17097,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -17189,7 +17125,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "19:00〜21:00",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -17220,288 +17156,288 @@
    "date": "2026-11-05",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-06",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-07",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-08",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-09",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-11",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "closed",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-05",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
    "period": "19:00〜21:00",
    "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "8:30〜10:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "10:30〜12:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "12:30〜14:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-06",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-07",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-08",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-09",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-10",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-11",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "closed",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-12",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -17556,7 +17492,7 @@
    "date": "2026-11-12",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
+   "period": "19:00〜21:00",
    "status": "full",
    "source": "toda"
   },
@@ -17609,10 +17545,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-12",
+   "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
+   "period": "8:30〜10:30",
    "status": "full",
    "source": "toda"
   },
@@ -17665,10 +17601,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-12",
+   "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -17721,10 +17657,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-12",
+   "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -17777,11 +17713,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-12",
+   "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
+   "period": "14:30〜16:30",
+   "status": "full",
    "source": "toda"
   },
   {
@@ -17833,11 +17769,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-12",
+   "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -17892,7 +17828,7 @@
    "date": "2026-11-19",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
+   "period": "19:00〜21:00",
    "status": "full",
    "source": "toda"
   },
@@ -17945,10 +17881,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-19",
+   "date": "2026-11-26",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "10:30〜12:30",
+   "period": "8:30〜10:30",
    "status": "full",
    "source": "toda"
   },
@@ -18001,10 +17937,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-19",
+   "date": "2026-11-26",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "12:30〜14:30",
+   "period": "10:30〜12:30",
    "status": "full",
    "source": "toda"
   },
@@ -18057,10 +17993,10 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-19",
+   "date": "2026-11-26",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "14:30〜16:30",
+   "period": "12:30〜14:30",
    "status": "full",
    "source": "toda"
   },
@@ -18113,7 +18049,15 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-19",
+   "date": "2026-11-26",
+   "ground": "笹目公園野球場",
+   "court": "野球場",
+   "period": "14:30〜16:30",
+   "status": "full",
+   "source": "toda"
+  },
+  {
+   "date": "2026-11-20",
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "17:00〜19:00",
@@ -18121,14 +18065,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-20",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-21",
    "ground": "笹目公園野球場",
    "court": "野球場",
@@ -18169,11 +18105,11 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-19",
+   "date": "2026-11-26",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "17:00〜19:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -18228,8 +18164,8 @@
    "date": "2026-11-26",
    "ground": "笹目公園野球場",
    "court": "野球場",
-   "period": "8:30〜10:30",
-   "status": "full",
+   "period": "19:00〜21:00",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -18265,14 +18201,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "10:30〜12:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "笹目公園野球場",
    "court": "野球場",
@@ -18305,14 +18233,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "笹目公園野球場",
    "court": "野球場",
@@ -18341,14 +18261,6 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "12:30〜14:30",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-26",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "14:30〜16:30",
    "status": "full",
    "source": "toda"
   },
@@ -18385,14 +18297,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "笹目公園野球場",
    "court": "野球場",
@@ -18425,14 +18329,6 @@
    "source": "toda"
   },
   {
-   "date": "2026-11-26",
-   "ground": "笹目公園野球場",
-   "court": "野球場",
-   "period": "19:00〜21:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
    "date": "2026-11-27",
    "ground": "笹目公園野球場",
    "court": "野球場",
@@ -18445,7 +18341,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "19:00〜21:00",
-   "status": "open",
+   "status": "full",
    "source": "toda"
   },
   {
