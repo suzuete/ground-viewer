@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T19:23:37.565782+09:00",
+ "updated": "2026-10-26T20:20:25.185674+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,12 +27,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-26T19:23:37.565782+09:00",
+   "at": "2026-10-26T20:20:25.185674+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-10-26T19:23:37.565782+09:00",
+   "at": "2026-10-26T20:20:25.185674+09:00",
    "error": null
   }
  },
@@ -421,47 +421,7 @@
    "date": "2026-10-27",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "9:00〜11:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "13:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "15:00〜17:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "17:00〜19:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "19:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
@@ -1477,32 +1437,8 @@
    "date": "2026-11-01",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "9:00〜11:00",
+   "period": "終日",
    "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "13:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "東スポーツセンター",
-   "court": "野球場",
-   "period": "15:00〜17:00",
-   "status": "open",
    "source": "kawaguchi"
   },
   {
