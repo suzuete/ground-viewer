@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T10:42:53.782332+09:00",
+ "updated": "2026-10-26T11:32:29.922513+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,12 +27,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-26T10:42:53.782332+09:00",
+   "at": "2026-10-26T11:32:29.922513+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-10-26T10:42:53.782332+09:00",
+   "at": "2026-10-26T11:32:29.922513+09:00",
    "error": null
   }
  },
@@ -166,7 +166,7 @@
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -270,7 +270,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -14198,7 +14198,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "14:00〜16:00",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14646,7 +14646,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "14:00〜16:00",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
