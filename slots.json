@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T08:10:23.314149+09:00",
+ "updated": "2026-10-27T08:50:33.523433+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,7 +27,7 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-10-27T08:10:23.314149+09:00",
+   "at": "2026-10-27T08:50:33.523433+09:00",
    "error": null
   },
   "toda": {
@@ -237,32 +237,8 @@
    "date": "2026-10-27",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
-   "period": "9:00〜11:00",
+   "period": "終日",
    "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "鳩ヶ谷スポーツセンター",
-   "court": "前田西野球場",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "鳩ヶ谷スポーツセンター",
-   "court": "前田西野球場",
-   "period": "13:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-10-27",
-   "ground": "鳩ヶ谷スポーツセンター",
-   "court": "前田西野球場",
-   "period": "15:00〜17:00",
-   "status": "open",
    "source": "kawaguchi"
   },
   {
