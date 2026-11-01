@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T13:29:53.282256+09:00",
+ "updated": "2026-11-01T14:26:21.418102+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,12 +27,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-01T13:29:53.282256+09:00",
+   "at": "2026-11-01T14:26:21.418102+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-01T13:29:53.282256+09:00",
+   "at": "2026-11-01T14:26:21.418102+09:00",
    "error": null
   }
  },
@@ -8198,7 +8198,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -8206,7 +8206,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9806,7 +9806,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9814,7 +9814,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -11190,14 +11190,6 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "12:00〜14:00",
-   "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-01",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
    "status": "full",
    "source": "toda"
   },
