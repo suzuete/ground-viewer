@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T16:22:25.698431+09:00",
+ "updated": "2026-11-02T17:44:23.018665+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,12 +27,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-02T16:22:25.698431+09:00",
+   "at": "2026-11-02T17:44:23.018665+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-02T16:22:25.698431+09:00",
+   "at": "2026-11-02T17:44:23.018665+09:00",
    "error": null
   }
  },
@@ -134,7 +134,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "17:00〜19:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -182,7 +182,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "17:00〜19:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -374,7 +374,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -8582,7 +8582,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -8590,7 +8590,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -8598,7 +8598,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -9654,7 +9654,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9662,7 +9662,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9670,7 +9670,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
