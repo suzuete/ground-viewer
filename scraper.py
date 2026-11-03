@@ -42,7 +42,7 @@ HORIZON_DAYS = 60        # 空きのある日を何日先まで調べるか
 MAX_PAGES = 12           # 1つのカレンダーで「次週」を押す最大回数
 TIME_DETAIL = True       # 時間帯(9:00〜11:00など)まで取得する
 TIME_WEEKDAYS = True     # 平日も時間帯まで取得する(Falseにすると土日祝のみ。実行時間が短くなる)
-TIME_HORIZON_DAYS = 45   # 時間帯は何日先まで取得するか
+TIME_HORIZON_DAYS = HORIZON_DAYS   # 時間帯は何日先まで取得するか(カレンダーを調べる範囲と同じにして、「要確認」が出ないようにする)
 BATCH_SIZE = 10          # 日付を同時に選べる上限(サイトの仕様: 最大10件)
 
 
