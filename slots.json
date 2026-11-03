@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:48:09.237498+09:00",
+ "updated": "2026-11-03T13:50:44.433831+09:00",
  "holidays": [
   "2026-11-03",
   "2026-11-23",
@@ -27,12 +27,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-03T12:48:09.237498+09:00",
+   "at": "2026-11-03T13:50:44.433831+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-03T12:48:09.237498+09:00",
+   "at": "2026-11-03T13:50:44.433831+09:00",
    "error": null
   }
  },
@@ -214,7 +214,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -228,14 +228,6 @@
   {
    "date": "2026-11-03",
    "ground": "芝スポーツセンター",
-   "court": "野球場",
-   "period": "終日",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-03",
-   "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "終日",
    "status": "full",
@@ -243,6 +235,14 @@
   },
   {
    "date": "2026-11-03",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "終日",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-03",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "9:00〜11:00",
@@ -262,7 +262,7 @@
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -3638,7 +3638,7 @@
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "9:00〜11:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -3646,7 +3646,7 @@
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "11:00〜13:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
