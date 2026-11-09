@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T14:39:50.404983+09:00",
+ "updated": "2026-11-09T15:48:18.421939+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-09T14:39:50.404983+09:00",
+   "at": "2026-11-09T15:48:18.421939+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-09T14:39:50.404983+09:00",
+   "at": "2026-11-09T15:48:18.421939+09:00",
    "error": null
   }
  },
@@ -125,7 +125,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -181,7 +181,7 @@
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -476,31 +476,7 @@
    "date": "2026-11-10",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "9:00〜12:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-10",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "18:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
