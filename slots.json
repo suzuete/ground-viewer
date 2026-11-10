@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T21:57:14.307637+09:00",
+ "updated": "2026-11-10T23:10:35.655889+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-10T21:57:14.307637+09:00",
+   "at": "2026-11-10T23:10:35.655889+09:00",
    "error": null
   },
   "toda": {
-   "ok": false,
-   "at": "2026-11-10T20:48:54.059715+09:00",
-   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"道満グリーンパーク\", exact=True)\n"
+   "ok": true,
+   "at": "2026-11-10T23:10:35.655889+09:00",
+   "error": null
   }
  },
  "slot_templates": {
@@ -1092,7 +1092,47 @@
    "date": "2026-11-14",
    "ground": "東スポーツセンター",
    "court": "野球場",
-   "period": "終日",
+   "period": "9:00〜11:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "13:00〜15:00",
+   "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-14",
+   "ground": "東スポーツセンター",
+   "court": "野球場",
+   "period": "19:00〜21:00",
    "status": "full",
    "source": "kawaguchi"
   },
@@ -12621,7 +12661,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "10:00〜12:00",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -12669,7 +12709,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "12:00〜14:00",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13197,7 +13237,7 @@
    "ground": "北部公園野球場",
    "court": "野球場(3~11月)",
    "period": "8:30〜10:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13237,7 +13277,7 @@
    "ground": "北部公園野球場",
    "court": "野球場(3~11月)",
    "period": "10:30〜12:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13277,7 +13317,7 @@
    "ground": "北部公園野球場",
    "court": "野球場(3~11月)",
    "period": "12:30〜14:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13317,7 +13357,7 @@
    "ground": "北部公園野球場",
    "court": "野球場(3~11月)",
    "period": "14:30〜16:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
