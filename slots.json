@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T20:21:22.561062+09:00",
+ "updated": "2026-11-10T20:48:54.059715+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-10T20:21:22.561062+09:00",
+   "at": "2026-11-10T20:48:54.059715+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-10T20:21:22.561062+09:00",
+   "at": "2026-11-10T20:48:54.059715+09:00",
    "error": null
   }
  },
@@ -5173,7 +5173,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5893,7 +5893,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -7437,7 +7437,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9029,7 +9029,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
