@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T20:48:54.059715+09:00",
+ "updated": "2026-11-10T21:57:14.307637+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-10T20:48:54.059715+09:00",
+   "at": "2026-11-10T21:57:14.307637+09:00",
    "error": null
   },
   "toda": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-10T20:48:54.059715+09:00",
-   "error": null
+   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"道満グリーンパーク\", exact=True)\n"
   }
  },
  "slot_templates": {
@@ -6733,7 +6733,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -8301,7 +8301,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
