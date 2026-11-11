@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T12:51:45.613620+09:00",
+ "updated": "2026-11-11T13:55:29.818447+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-11T12:51:45.613620+09:00",
+   "at": "2026-11-11T13:55:29.818447+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-11T12:51:45.613620+09:00",
+   "at": "2026-11-11T13:55:29.818447+09:00",
    "error": null
   }
  },
@@ -111,7 +111,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -167,7 +167,7 @@
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -231,7 +231,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
