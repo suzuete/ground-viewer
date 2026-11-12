@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T11:49:46.406136+09:00",
+ "updated": "2026-11-12T12:51:53.907487+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-12T11:49:46.406136+09:00",
+   "at": "2026-11-12T12:51:53.907487+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-12T11:49:46.406136+09:00",
+   "at": "2026-11-12T12:51:53.907487+09:00",
    "error": null
   }
  },
@@ -309,7 +309,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -412,47 +412,7 @@
    "date": "2026-11-13",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "9:00〜11:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "11:00〜13:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "13:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "15:00〜17:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-13",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "19:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
@@ -12677,14 +12637,6 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "10:00〜12:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
    "status": "open",
    "source": "toda"
   },
