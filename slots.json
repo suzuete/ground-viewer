@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:35:38.276123+09:00",
+ "updated": "2026-11-12T19:40:58.788341+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-12T18:35:38.276123+09:00",
+   "at": "2026-11-12T19:40:58.788341+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-12T18:35:38.276123+09:00",
+   "at": "2026-11-12T19:40:58.788341+09:00",
    "error": null
   }
  },
@@ -13909,7 +13909,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "8:30〜10:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13949,7 +13949,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "10:30〜12:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -13989,7 +13989,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "12:30〜14:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14029,7 +14029,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "14:30〜16:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14165,7 +14165,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "8:30〜10:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14221,7 +14221,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "10:30〜12:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14277,7 +14277,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "12:30〜14:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14333,7 +14333,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "14:30〜16:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14541,7 +14541,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "10:30〜12:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14581,7 +14581,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "12:30〜14:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
@@ -14621,7 +14621,7 @@
    "ground": "笹目公園野球場",
    "court": "野球場",
    "period": "14:30〜16:30",
-   "status": "full",
+   "status": "open",
    "source": "toda"
   },
   {
