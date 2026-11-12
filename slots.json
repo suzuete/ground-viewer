@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T13:56:44.646291+09:00",
+ "updated": "2026-11-12T14:59:26.499265+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-12T13:56:44.646291+09:00",
+   "at": "2026-11-12T14:59:26.499265+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-12T13:56:44.646291+09:00",
+   "at": "2026-11-12T14:59:26.499265+09:00",
    "error": null
   }
  },
@@ -117,7 +117,7 @@
    "ground": "安行スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -140,47 +140,7 @@
    "date": "2026-11-12",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "9:00〜11:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "13:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "15:00〜17:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "19:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
@@ -357,7 +317,7 @@
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -12685,14 +12645,6 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "12:00〜14:00",
-   "status": "open",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-12",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "14:00〜16:00",
    "status": "open",
    "source": "toda"
   },
