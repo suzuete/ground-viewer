@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T23:07:53.671053+09:00",
+ "updated": "2026-11-14T23:59:33.450286+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,13 +26,13 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-14T23:07:53.671053+09:00",
+   "at": "2026-11-14T23:59:33.450286+09:00",
    "error": null
   },
   "toda": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-14T23:07:53.671053+09:00",
-   "error": null
+   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#searchButton\")\n"
   }
  },
  "slot_templates": {
@@ -108,48 +108,8 @@
    "date": "2026-11-14",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "9:00〜11:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "13:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "15:00〜17:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-14",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "19:00〜21:00",
-   "status": "full",
+   "period": "要確認",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
