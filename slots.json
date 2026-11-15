@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T16:47:45.866004+09:00",
+ "updated": "2026-11-15T17:49:49.425486+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,12 +26,12 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-15T16:47:45.866004+09:00",
+   "at": "2026-11-15T17:49:49.425486+09:00",
    "error": null
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-15T16:47:45.866004+09:00",
+   "at": "2026-11-15T17:49:49.425486+09:00",
    "error": null
   }
  },
@@ -9197,7 +9197,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -9205,7 +9205,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -13157,7 +13157,7 @@
    "ground": "道満グリーンパーク",
    "court": "野球場A",
    "period": "14:00〜16:00",
-   "status": "open",
+   "status": "full",
    "source": "toda"
   },
   {
