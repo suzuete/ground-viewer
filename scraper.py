@@ -707,13 +707,18 @@ def main():
                 print(f"[{sid}] 稼働時間外のためスキップ(前回データを維持)")
                 continue
             page = browser.new_page()
+            prev = status.get(sid, {})
+            day = now.date().isoformat()                      # 日本時間の「今日」
+            checks = prev.get("checks", 0) if prev.get("day") == day else 0
+            fails = prev.get("fails", 0) if prev.get("day") == day else 0
             try:
                 slots_by_src[sid] = src["fn"](page)
-                status[sid] = {"ok": True, "at": now.isoformat(), "error": None}
+                status[sid] = {"ok": True, "at": now.isoformat(), "error": None,
+                               "day": day, "checks": checks + 1, "fails": fails}
                 print(f"[{sid}] {len(slots_by_src[sid])} 件取得")
             except Exception as e:
-                prev = status.get(sid, {})
-                status[sid] = {"ok": False, "at": prev.get("at"), "error": str(e)}
+                status[sid] = {"ok": False, "at": prev.get("at"), "error": str(e),
+                               "day": day, "checks": checks + 1, "fails": fails + 1}
                 print(f"[{sid}] 失敗: {e}(前回データを維持)")
             finally:
                 page.close()

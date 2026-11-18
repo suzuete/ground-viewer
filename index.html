@@ -180,6 +180,9 @@ function renderSources(d) {
     const t = fmt(x.at);
     let body = t ? `最終取得 <b>${t}</b>` : "未取得";
     if (t && x.ok === false) body += "(直近の取得は失敗。前回の情報を表示中)";
+    const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);   // 日本時間の今日
+    const n = x.day === today ? (x.checks || 0) : 0, f = x.day === today ? (x.fails || 0) : 0;
+    body += `　本日 <b>${n}</b> 回確認` + (f ? `(うち失敗 ${f} 回)` : "");
     return `<div>${s.name}: ${body}${cycle ? "(" + cycle + ")" : ""}</div>`;
   }).join("");
 }
