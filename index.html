@@ -49,6 +49,11 @@ tr.full td:last-child{background:var(--full)}
 dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);max-width:90vw;width:360px}
 dialog::backdrop{background:rgba(0,0,0,.4)}
 #rulesDlg{width:min(560px,94vw);max-height:90vh;overflow:auto}
+#logDlg{width:min(680px,96vw);max-height:90vh;overflow:auto}
+#logDlg table{width:100%;border-collapse:collapse;font-size:.8rem;margin:6px 0 10px;border:0;background:transparent}
+#logDlg th,#logDlg td{padding:4px 6px;border-bottom:1px solid var(--line);white-space:normal}
+#logDlg tr.bad td{color:#b42318}
+#logDlg td:nth-child(-n+3){white-space:nowrap}
 .rule{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px}
 .rhead{display:flex;gap:8px;margin-bottom:6px}
 .rname{flex:1;border:1px solid var(--line);border-radius:6px;padding:5px 8px;background:var(--bg);color:var(--text);font:inherit}
@@ -71,7 +76,7 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
   <div class="meta">空き枠: <b id="count">読み込み中…</b></div>
   <div class="meta" id="srcStatus"></div>
   <div class="links" id="links"></div>
-  <div class="links"><button class="rbtn" id="rulesBtn">通知条件の設定</button></div>
+  <div class="links"><button class="rbtn" id="rulesBtn">通知条件の設定</button> <button class="rbtn" id="logBtn">確認履歴</button></div>
   <div id="banner"></div>
 
   <div class="panel">
@@ -114,6 +119,13 @@ dialog::backdrop{background:rgba(0,0,0,.4)}
     <a class="rbtn" id="editRules" target="_blank" rel="noopener">GitHubで編集画面を開く</a>
     <button class="rbtn" id="closeRules">閉じる</button>
   </div>
+</dialog>
+
+<dialog id="logDlg">
+  <h3>確認履歴</h3>
+  <p class="hint">自動で空き状況を確認した記録です(新しい順、最大600件)。日本時間で表示します。</p>
+  <div id="logBody"></div>
+  <div class="rfoot"><button class="rbtn" id="closeLog">閉じる</button></div>
 </dialog>
 
 <script>
@@ -278,6 +290,30 @@ document.addEventListener("click", e => {
   }
 });
 $("onlyOpen").addEventListener("change", render);
+// ---- 確認履歴 ----
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+$("logBtn").onclick = () => {
+  const hist = (state.data.history || []).slice().reverse();
+  const names = Object.fromEntries((state.data.sources || []).map(s => [s.id, s.name]));
+  if (!hist.length) {
+    $("logBody").innerHTML = '<div class="empty">まだ履歴がありません(次の確認から記録されます)</div>';
+  } else {
+    const days = {};
+    hist.forEach(e => {
+      const d = e.at.slice(0, 10), k = d + "|" + e.src;
+      const x = days[k] = days[k] || { d, src: e.src, n: 0, f: 0, nw: 0 };
+      x.n++; if (!e.ok) x.f++; x.nw += e.new || 0;
+    });
+    const sum = Object.values(days).sort((a, b) => (b.d + b.src).localeCompare(a.d + a.src))
+      .map(x => `<tr><td>${x.d.slice(5).replace("-", "/")}</td><td>${esc(names[x.src] || x.src)}</td><td>${x.n} 回</td><td>${x.f ? "失敗 " + x.f + " 回" : "失敗なし"}</td><td>${x.nw ? "新しい空き " + x.nw + " 枠" : ""}</td></tr>`).join("");
+    const rows = hist.slice(0, 120).map(e => `<tr class="${e.ok ? "" : "bad"}"><td>${esc(fmt(e.at))}</td><td>${esc(names[e.src] || e.src)}</td><td>${e.ok ? "○ 成功" : "× 失敗"}</td><td>${e.ok ? e.slots + " 件(空き " + e.open + ")" : ""}</td><td>${e.new ? "新しい空き " + e.new : ""}${esc(e.error || "")}</td></tr>`).join("");
+    $("logBody").innerHTML = `<div class="rlabel">日ごとのまとめ</div><table>${sum}</table><div class="rlabel">1回ごとの記録(新しい順)</div><table><tr><th>日時</th><th>市</th><th>結果</th><th>取得</th><th>メモ</th></tr>${rows}</table>`;
+  }
+  $("logDlg").showModal();
+  $("logDlg").scrollTop = 0;
+};
+$("closeLog").onclick = () => $("logDlg").close();
+
 // ---- 通知条件の設定 ----
 const DAYS = ["月", "火", "水", "木", "金", "土", "日", "祝"];
 let rules = [];

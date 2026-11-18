@@ -56,6 +56,7 @@ NOTIFY_FILE = "notify.json"
 DOW_JA = "月火水木金土日"
 
 
+HISTORY_MAX = 600                  # 確認履歴に残す件数(約5日分)
 RULES_FILE = "notify_rules.json"   # 通知の条件(曜日・施設・時間帯)。GitHub上で編集できる
 RULES = None                       # main() が読み込む。None のときは標準の条件(NOTIFY_WEEKDAYS)を使う
 
@@ -696,6 +697,7 @@ def main():
             os.remove(fn)
     status = old.get("source_status", {})
     slots_by_src = {s["id"]: [] for s in SOURCES}
+    run_log = {}                       # 今回の確認結果(確認履歴に追加する)
     for s in old.get("slots", []):
         slots_by_src.setdefault(s["source"], []).append(s)
 
@@ -715,15 +717,33 @@ def main():
                 slots_by_src[sid] = src["fn"](page)
                 status[sid] = {"ok": True, "at": now.isoformat(), "error": None,
                                "day": day, "checks": checks + 1, "fails": fails}
+                run_log[sid] = {"at": now.isoformat(), "src": sid, "ok": True,
+                                "slots": len(slots_by_src[sid]),
+                                "open": sum(1 for x in slots_by_src[sid] if x["status"] == "open"),
+                                "new": 0, "error": ""}
                 print(f"[{sid}] {len(slots_by_src[sid])} 件取得")
             except Exception as e:
                 status[sid] = {"ok": False, "at": prev.get("at"), "error": str(e),
                                "day": day, "checks": checks + 1, "fails": fails + 1}
+                msg = (str(e).splitlines() or [""])[0][:120]
+                run_log[sid] = {"at": now.isoformat(), "src": sid, "ok": False,
+                                "slots": 0, "open": 0, "new": 0, "error": f"{type(e).__name__}: {msg}"}
                 print(f"[{sid}] 失敗: {e}(前回データを維持)")
             finally:
                 page.close()
         browser.close()
 
+    all_slots = [x for lst in slots_by_src.values() for x in lst]
+    names = {x["id"]: x["name"] for x in SOURCES}
+    test_mode = os.environ.get("NOTIFY_TEST") == "true"
+    new = []
+    if NOTIFY and old_slots and not test_mode:          # 初回(前回データなし)は通知しない
+        new = find_new_open(old_slots, all_slots)
+    for x in new:
+        if x["source"] in run_log:
+            run_log[x["source"]]["new"] += 1
+
+    history = (old.get("history", []) + list(run_log.values()))[-HISTORY_MAX:]
     out = {
         "updated": now.isoformat(),
         "holidays": holidays_between(now.date(), now.date() + timedelta(days=120)) if jpholiday else old.get("holidays", []),
@@ -731,20 +751,18 @@ def main():
                      "interval_min": s["interval_min"], "hours": s["hours"]} for s in SOURCES],
         "source_status": status,
         "slot_templates": TEMPLATES,
-        "slots": [x for lst in slots_by_src.values() for x in lst],
+        "history": history,
+        "slots": all_slots,
     }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
 
-    names = {x["id"]: x["name"] for x in SOURCES}
-    if os.environ.get("NOTIFY_TEST") == "true":
+    if test_mode:
         write_notification([], names, test=True)
         print("[notify] テスト通知を作成しました")
-    elif NOTIFY and old_slots:             # 初回(前回データなし)は通知しない
-        new = find_new_open(old_slots, out["slots"])
-        if new:
-            write_notification(new, names)
-            print(f"[notify] 新しい空き {len(new)} 枠を通知します")
+    elif new:
+        write_notification(new, names)
+        print(f"[notify] 新しい空き {len(new)} 枠を通知します")
 
 
 if __name__ == "__main__":
