@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:37:17.754737+09:00",
+ "updated": "2026-11-19T11:57:27.175778+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,18 +26,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-19T11:37:17.754737+09:00",
+   "at": "2026-11-19T11:57:27.175778+09:00",
    "error": null,
    "day": "2026-11-19",
-   "checks": 36,
+   "checks": 37,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-19T11:37:17.754737+09:00",
+   "at": "2026-11-19T11:57:27.175778+09:00",
    "error": null,
    "day": "2026-11-19",
-   "checks": 8,
+   "checks": 9,
    "fails": 0
   }
  },
@@ -1001,6 +1001,24 @@
    "open": 34,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-19T11:57:27.175778+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1557,
+   "open": 563,
+   "new": 2,
+   "error": ""
+  },
+  {
+   "at": "2026-11-19T11:57:27.175778+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 166,
+   "open": 34,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -1920,8 +1938,32 @@
    "date": "2026-11-23",
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
-   "period": "終日",
+   "period": "9:00〜11:00",
    "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "13:00〜15:00",
+   "status": "open",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-23",
+   "ground": "鳩ヶ谷スポーツセンター",
+   "court": "前田西野球場",
+   "period": "15:00〜17:00",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
