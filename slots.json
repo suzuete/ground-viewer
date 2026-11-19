@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T10:37:19.384726+09:00",
+ "updated": "2026-11-19T10:57:17.782794+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,18 +26,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-19T10:37:19.384726+09:00",
+   "at": "2026-11-19T10:57:17.782794+09:00",
    "error": null,
    "day": "2026-11-19",
-   "checks": 33,
+   "checks": 34,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-19T10:37:19.384726+09:00",
+   "at": "2026-11-19T10:57:17.782794+09:00",
    "error": null,
    "day": "2026-11-19",
-   "checks": 5,
+   "checks": 6,
    "fails": 0
   }
  },
@@ -947,6 +947,24 @@
    "open": 34,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-19T10:57:17.782794+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1554,
+   "open": 562,
+   "new": 1,
+   "error": ""
+  },
+  {
+   "at": "2026-11-19T10:57:17.782794+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 166,
+   "open": 34,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -1682,8 +1700,32 @@
    "date": "2026-11-22",
    "ground": "東スポーツセンター",
    "court": "舟戸運動場",
-   "period": "終日",
+   "period": "9:00〜11:00",
    "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "東スポーツセンター",
+   "court": "舟戸運動場",
+   "period": "15:00〜17:00",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
