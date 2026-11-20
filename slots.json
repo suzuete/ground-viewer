@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T22:37:18.358115+09:00",
+ "updated": "2026-11-20T22:57:18.293905+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -26,18 +26,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-20T22:37:18.358115+09:00",
+   "at": "2026-11-20T22:57:18.293905+09:00",
    "error": null,
    "day": "2026-11-20",
-   "checks": 70,
+   "checks": 71,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-20T22:37:18.358115+09:00",
+   "at": "2026-11-20T22:57:18.293905+09:00",
    "error": null,
    "day": "2026-11-20",
-   "checks": 42,
+   "checks": 43,
    "fails": 0
   }
  },
@@ -2675,6 +2675,24 @@
    "open": 34,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-20T22:57:18.293905+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1580,
+   "open": 544,
+   "new": 2,
+   "error": ""
+  },
+  {
+   "at": "2026-11-20T22:57:18.293905+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 148,
+   "open": 34,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -3250,8 +3268,48 @@
    "date": "2026-11-22",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "終日",
+   "period": "9:00〜11:00",
    "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "11:00〜13:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "13:00〜15:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "15:00〜17:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "17:00〜19:00",
+   "status": "full",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2026-11-22",
+   "ground": "戸塚スポーツセンター",
+   "court": "多目的グラウンド（1面）",
+   "period": "19:00〜21:00",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
@@ -3363,7 +3421,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
