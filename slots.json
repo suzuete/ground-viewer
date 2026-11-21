@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T23:37:18.423287+09:00",
+ "updated": "2026-11-21T23:57:17.719402+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -27,19 +27,19 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-21T23:37:18.423287+09:00",
+   "at": "2026-11-21T23:57:17.719402+09:00",
    "error": null,
    "day": "2026-11-21",
-   "checks": 75,
+   "checks": 76,
    "fails": 0
   },
   "toda": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-21T23:37:18.423287+09:00",
-   "error": null,
+   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#searchButton\")\n",
    "day": "2026-11-21",
-   "checks": 46,
-   "fails": 0
+   "checks": 47,
+   "fails": 1
   }
  },
  "slot_templates": {
@@ -3837,6 +3837,24 @@
    "open": 35,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-21T23:57:17.719402+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1594,
+   "open": 538,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-21T23:57:17.719402+09:00",
+   "src": "toda",
+   "ok": false,
+   "slots": 0,
+   "open": 0,
+   "new": 0,
+   "error": "TimeoutError: Locator.click: Timeout 30000ms exceeded."
   }
  ],
  "slots": [
