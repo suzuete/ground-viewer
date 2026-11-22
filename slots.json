@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T12:37:18.040146+09:00",
+ "updated": "2026-11-22T12:57:18.024893+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -28,18 +28,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-22T12:37:18.040146+09:00",
+   "at": "2026-11-22T12:57:18.024893+09:00",
    "error": null,
    "day": "2026-11-22",
-   "checks": 39,
+   "checks": 40,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-22T12:37:18.040146+09:00",
+   "at": "2026-11-22T12:57:18.024893+09:00",
    "error": null,
    "day": "2026-11-22",
-   "checks": 12,
+   "checks": 13,
    "fails": 0
   }
  },
@@ -4315,6 +4315,24 @@
    "open": 30,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-22T12:57:18.024893+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1591,
+   "open": 537,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-22T12:57:18.024893+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 613,
+   "open": 30,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -4322,32 +4340,8 @@
    "date": "2026-11-22",
    "ground": "安行スポーツセンター",
    "court": "野球場",
-   "period": "9:00〜11:00",
+   "period": "終日",
    "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "安行スポーツセンター",
-   "court": "野球場",
-   "period": "11:00〜13:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "安行スポーツセンター",
-   "court": "野球場",
-   "period": "13:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-22",
-   "ground": "安行スポーツセンター",
-   "court": "野球場",
-   "period": "15:00〜17:00",
-   "status": "open",
    "source": "kawaguchi"
   },
   {
