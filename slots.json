@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:57:18.308768+09:00",
+ "updated": "2026-11-23T13:17:18.758272+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -28,18 +28,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-23T12:57:18.308768+09:00",
+   "at": "2026-11-23T13:17:18.758272+09:00",
    "error": null,
    "day": "2026-11-23",
-   "checks": 39,
+   "checks": 40,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-23T12:57:18.308768+09:00",
+   "at": "2026-11-23T13:17:18.758272+09:00",
    "error": null,
    "day": "2026-11-23",
-   "checks": 12,
+   "checks": 13,
    "fails": 0
   }
  },
@@ -5404,6 +5404,24 @@
    "open": 25,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-23T13:17:18.758272+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1606,
+   "open": 520,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-23T13:17:18.758272+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 597,
+   "open": 25,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -5436,7 +5454,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5484,7 +5502,7 @@
    "ground": "新郷スポーツセンター",
    "court": "競技場（運動場）",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5620,7 +5638,7 @@
    "ground": "鳩ヶ谷スポーツセンター",
    "court": "前田西野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
