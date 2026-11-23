@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:17:18.255972+09:00",
+ "updated": "2026-11-23T12:37:18.093043+09:00",
  "holidays": [
   "2026-11-23",
   "2027-01-01",
@@ -28,18 +28,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-23T12:17:18.255972+09:00",
+   "at": "2026-11-23T12:37:18.093043+09:00",
    "error": null,
    "day": "2026-11-23",
-   "checks": 37,
+   "checks": 38,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-23T12:17:18.255972+09:00",
+   "at": "2026-11-23T12:37:18.093043+09:00",
    "error": null,
    "day": "2026-11-23",
-   "checks": 10,
+   "checks": 11,
    "fails": 0
   }
  },
@@ -5368,6 +5368,24 @@
    "open": 25,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-23T12:37:18.093043+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1606,
+   "open": 523,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-23T12:37:18.093043+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 597,
+   "open": 25,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -5647,47 +5665,7 @@
    "date": "2026-11-24",
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
-   "period": "9:00〜11:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "11:00〜13:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "13:00〜15:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "15:00〜17:00",
-   "status": "open",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "17:00〜19:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "戸塚スポーツセンター",
-   "court": "多目的グラウンド（1面）",
-   "period": "19:00〜21:00",
+   "period": "終日",
    "status": "full",
    "source": "kawaguchi"
   },
