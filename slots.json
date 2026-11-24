@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T11:57:22.729789+09:00",
+ "updated": "2026-11-24T12:17:18.005114+09:00",
  "holidays": [
   "2027-01-01",
   "2027-01-11",
@@ -27,18 +27,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-24T11:57:22.729789+09:00",
+   "at": "2026-11-24T12:17:18.005114+09:00",
    "error": null,
    "day": "2026-11-24",
-   "checks": 36,
+   "checks": 37,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-24T11:57:22.729789+09:00",
+   "at": "2026-11-24T12:17:18.005114+09:00",
    "error": null,
    "day": "2026-11-24",
-   "checks": 9,
+   "checks": 10,
    "fails": 0
   }
  },
@@ -103,24 +103,6 @@
   ]
  },
  "history": [
-  {
-   "at": "2026-11-19T11:57:27.175778+09:00",
-   "src": "kawaguchi",
-   "ok": true,
-   "slots": 1557,
-   "open": 563,
-   "new": 2,
-   "error": ""
-  },
-  {
-   "at": "2026-11-19T11:57:27.175778+09:00",
-   "src": "toda",
-   "ok": true,
-   "slots": 166,
-   "open": 34,
-   "new": 0,
-   "error": ""
-  },
   {
    "at": "2026-11-19T12:17:17.481506+09:00",
    "src": "kawaguchi",
@@ -5502,6 +5484,24 @@
    "open": 20,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-24T12:17:18.005114+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1591,
+   "open": 505,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-24T12:17:18.005114+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 581,
+   "open": 19,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -5726,7 +5726,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5830,7 +5830,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5838,7 +5838,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5846,7 +5846,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -5854,7 +5854,7 @@
    "ground": "戸塚スポーツセンター",
    "court": "多目的グラウンド（1面）",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -18327,14 +18327,6 @@
    "court": "野球場A",
    "period": "10:00〜12:00",
    "status": "full",
-   "source": "toda"
-  },
-  {
-   "date": "2026-11-24",
-   "ground": "道満グリーンパーク",
-   "court": "野球場A",
-   "period": "12:00〜14:00",
-   "status": "open",
    "source": "toda"
   },
   {
