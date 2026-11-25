@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:37:18.013956+09:00",
+ "updated": "2026-11-25T19:57:18.482927+09:00",
  "holidays": [
   "2027-01-01",
   "2027-01-11",
@@ -27,18 +27,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-25T19:37:18.013956+09:00",
+   "at": "2026-11-25T19:57:18.482927+09:00",
    "error": null,
    "day": "2026-11-25",
-   "checks": 58,
+   "checks": 59,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-25T19:37:18.013956+09:00",
+   "at": "2026-11-25T19:57:18.482927+09:00",
    "error": null,
    "day": "2026-11-25",
-   "checks": 32,
+   "checks": 33,
    "fails": 0
   }
  },
@@ -85,7 +85,9 @@
    "9:00〜11:00",
    "11:00〜13:00",
    "13:00〜15:00",
-   "15:00〜17:00"
+   "15:00〜17:00",
+   "17:00〜19:00",
+   "19:00〜21:00"
   ],
   "青木町公園総合運動場|野球場": [
    "9:00〜12:00",
@@ -101,24 +103,6 @@
   ]
  },
  "history": [
-  {
-   "at": "2026-11-20T19:17:18.590580+09:00",
-   "src": "kawaguchi",
-   "ok": true,
-   "slots": 1575,
-   "open": 543,
-   "new": 0,
-   "error": ""
-  },
-  {
-   "at": "2026-11-20T19:17:18.590580+09:00",
-   "src": "toda",
-   "ok": true,
-   "slots": 148,
-   "open": 34,
-   "new": 0,
-   "error": ""
-  },
   {
    "at": "2026-11-20T19:37:18.102207+09:00",
    "src": "kawaguchi",
@@ -5494,6 +5478,24 @@
   },
   {
    "at": "2026-11-25T19:37:18.013956+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 564,
+   "open": 16,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-25T19:57:18.482927+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1571,
+   "open": 472,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-25T19:57:18.482927+09:00",
    "src": "toda",
    "ok": true,
    "slots": 564,
@@ -13364,7 +13366,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -13372,7 +13374,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -13652,22 +13654,6 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-05",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-05",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
    "status": "outside",
    "source": "kawaguchi"
   },
@@ -13675,6 +13661,22 @@
    "date": "2027-01-05",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
+   "period": "12:00〜15:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-05",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "15:00〜18:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-05",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
    "period": "18:00〜21:00",
    "status": "outside",
    "source": "kawaguchi"
@@ -14476,21 +14478,21 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "full",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-08",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "15:00〜18:00",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2027-01-08",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "15:00〜18:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-08",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
    "period": "18:00〜21:00",
    "status": "outside",
    "source": "kawaguchi"
@@ -14676,22 +14678,6 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-09",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-09",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
    "status": "outside",
    "source": "kawaguchi"
   },
@@ -14699,6 +14685,22 @@
    "date": "2027-01-09",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
+   "period": "12:00〜15:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-09",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "15:00〜18:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-09",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
    "period": "18:00〜21:00",
    "status": "outside",
    "source": "kawaguchi"
@@ -14964,22 +14966,6 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-11",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-11",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
-   "period": "15:00〜18:00",
    "status": "outside",
    "source": "kawaguchi"
   },
@@ -14987,8 +14973,24 @@
    "date": "2027-01-11",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
+   "period": "12:00〜15:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-11",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "15:00〜18:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-11",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -15212,23 +15214,23 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-12",
+   "ground": "青木町公園総合運動場",
+   "court": "野球場",
+   "period": "12:00〜15:00",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
    "date": "2027-01-12",
    "ground": "青木町公園総合運動場",
    "court": "野球場",
-   "period": "12:00〜15:00",
-   "status": "full",
-   "source": "kawaguchi"
-  },
-  {
-   "date": "2027-01-12",
-   "ground": "青木町公園総合運動場",
-   "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -15516,7 +15518,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -15524,7 +15526,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -15804,7 +15806,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -15812,7 +15814,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16092,7 +16094,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16100,7 +16102,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16260,7 +16262,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16268,7 +16270,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16276,7 +16278,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16284,7 +16286,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16636,7 +16638,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "9:00〜12:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16652,7 +16654,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16660,7 +16662,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16940,7 +16942,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -16948,7 +16950,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17228,7 +17230,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17236,7 +17238,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "18:00〜21:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17508,7 +17510,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17516,7 +17518,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17796,7 +17798,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17804,7 +17806,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17908,7 +17910,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17916,7 +17918,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17924,7 +17926,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -17932,7 +17934,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -18012,7 +18014,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -18020,7 +18022,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -18028,7 +18030,7 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "full",
+   "status": "outside",
    "source": "kawaguchi"
   },
   {
@@ -18036,6 +18038,22 @@
    "ground": "芝スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "17:00〜19:00",
+   "status": "outside",
+   "source": "kawaguchi"
+  },
+  {
+   "date": "2027-01-24",
+   "ground": "芝スポーツセンター",
+   "court": "野球場",
+   "period": "19:00〜21:00",
    "status": "outside",
    "source": "kawaguchi"
   },
