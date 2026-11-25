@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:57:20.099877+09:00",
+ "updated": "2026-11-25T16:17:17.658023+09:00",
  "holidays": [
   "2027-01-01",
   "2027-01-11",
@@ -27,18 +27,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-25T15:57:20.099877+09:00",
+   "at": "2026-11-25T16:17:17.658023+09:00",
    "error": null,
    "day": "2026-11-25",
-   "checks": 47,
+   "checks": 48,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-25T15:57:20.099877+09:00",
+   "at": "2026-11-25T16:17:17.658023+09:00",
    "error": null,
    "day": "2026-11-25",
-   "checks": 21,
+   "checks": 22,
    "fails": 0
   }
  },
@@ -101,24 +101,6 @@
   ]
  },
  "history": [
-  {
-   "at": "2026-11-20T15:37:18.190157+09:00",
-   "src": "kawaguchi",
-   "ok": true,
-   "slots": 1575,
-   "open": 544,
-   "new": 0,
-   "error": ""
-  },
-  {
-   "at": "2026-11-20T15:37:18.190157+09:00",
-   "src": "toda",
-   "ok": true,
-   "slots": 148,
-   "open": 31,
-   "new": 1,
-   "error": ""
-  },
   {
    "at": "2026-11-20T15:57:18.020693+09:00",
    "src": "kawaguchi",
@@ -5494,6 +5476,24 @@
   },
   {
    "at": "2026-11-25T15:57:20.099877+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 564,
+   "open": 16,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-25T16:17:17.658023+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1569,
+   "open": 477,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-25T16:17:17.658023+09:00",
    "src": "toda",
    "ok": true,
    "slots": 564,
@@ -17508,7 +17508,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "outside",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -17516,7 +17516,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "outside",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -17796,7 +17796,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "12:00〜15:00",
-   "status": "outside",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -17804,7 +17804,7 @@
    "ground": "青木町公園総合運動場",
    "court": "野球場",
    "period": "15:00〜18:00",
-   "status": "outside",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
