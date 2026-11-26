@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T17:57:18.888788+09:00",
+ "updated": "2026-11-26T18:17:17.685295+09:00",
  "holidays": [
   "2027-01-01",
   "2027-01-11",
@@ -27,18 +27,18 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-26T17:57:18.888788+09:00",
+   "at": "2026-11-26T18:17:17.685295+09:00",
    "error": null,
    "day": "2026-11-26",
-   "checks": 54,
+   "checks": 55,
    "fails": 0
   },
   "toda": {
    "ok": true,
-   "at": "2026-11-26T17:57:18.888788+09:00",
+   "at": "2026-11-26T18:17:17.685295+09:00",
    "error": null,
    "day": "2026-11-26",
-   "checks": 28,
+   "checks": 29,
    "fails": 0
   }
  },
@@ -103,24 +103,6 @@
   ]
  },
  "history": [
-  {
-   "at": "2026-11-21T17:17:17.461929+09:00",
-   "src": "toda",
-   "ok": true,
-   "slots": 132,
-   "open": 32,
-   "new": 0,
-   "error": ""
-  },
-  {
-   "at": "2026-11-21T17:37:17.392864+09:00",
-   "src": "kawaguchi",
-   "ok": true,
-   "slots": 1585,
-   "open": 537,
-   "new": 0,
-   "error": ""
-  },
   {
    "at": "2026-11-21T17:37:17.392864+09:00",
    "src": "toda",
@@ -5502,6 +5484,24 @@
    "open": 10,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-26T18:17:17.685295+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1555,
+   "open": 441,
+   "new": 0,
+   "error": ""
+  },
+  {
+   "at": "2026-11-26T18:17:17.685295+09:00",
+   "src": "toda",
+   "ok": true,
+   "slots": 548,
+   "open": 10,
+   "new": 0,
+   "error": ""
   }
  ],
  "slots": [
@@ -7502,7 +7502,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "9:00〜11:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -7510,7 +7510,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -7518,7 +7518,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "13:00〜15:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
@@ -7526,7 +7526,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "15:00〜17:00",
-   "status": "open",
+   "status": "full",
    "source": "kawaguchi"
   },
   {
