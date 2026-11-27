@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T23:37:19.514031+09:00",
+ "updated": "2026-11-27T23:57:17.943796+09:00",
  "holidays": [
   "2027-01-01",
   "2027-01-11",
@@ -27,19 +27,19 @@
  "source_status": {
   "kawaguchi": {
    "ok": true,
-   "at": "2026-11-27T23:37:19.514031+09:00",
+   "at": "2026-11-27T23:57:17.943796+09:00",
    "error": null,
    "day": "2026-11-27",
-   "checks": 73,
+   "checks": 74,
    "fails": 0
   },
   "toda": {
-   "ok": true,
+   "ok": false,
    "at": "2026-11-27T23:37:19.514031+09:00",
-   "error": null,
+   "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#searchButton\")\n",
    "day": "2026-11-27",
-   "checks": 45,
-   "fails": 0
+   "checks": 46,
+   "fails": 1
   }
  },
  "slot_templates": {
@@ -103,24 +103,6 @@
   ]
  },
  "history": [
-  {
-   "at": "2026-11-22T22:57:17.681114+09:00",
-   "src": "kawaguchi",
-   "ok": true,
-   "slots": 1591,
-   "open": 534,
-   "new": 0,
-   "error": ""
-  },
-  {
-   "at": "2026-11-22T22:57:17.681114+09:00",
-   "src": "toda",
-   "ok": true,
-   "slots": 612,
-   "open": 29,
-   "new": 0,
-   "error": ""
-  },
   {
    "at": "2026-11-22T23:17:17.588102+09:00",
    "src": "kawaguchi",
@@ -5502,6 +5484,24 @@
    "open": 9,
    "new": 0,
    "error": ""
+  },
+  {
+   "at": "2026-11-27T23:57:17.943796+09:00",
+   "src": "kawaguchi",
+   "ok": true,
+   "slots": 1570,
+   "open": 426,
+   "new": 1,
+   "error": ""
+  },
+  {
+   "at": "2026-11-27T23:57:17.943796+09:00",
+   "src": "toda",
+   "ok": false,
+   "slots": 0,
+   "open": 0,
+   "new": 0,
+   "error": "TimeoutError: Locator.click: Timeout 30000ms exceeded."
   }
  ],
  "slots": [
@@ -5902,7 +5902,7 @@
    "ground": "東スポーツセンター",
    "court": "野球場",
    "period": "11:00〜13:00",
-   "status": "full",
+   "status": "open",
    "source": "kawaguchi"
   },
   {
